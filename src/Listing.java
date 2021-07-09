@@ -12,11 +12,11 @@ public class Listing {
     private Participant propertyOwner;
     private Broker broker;
     private Participant buyer;
-    private Status status;
+    private String status;
 
     // methods
     // getters
-    public Status getStatus(){
+    public String getStatus(){
         return this.status;
     }
 
