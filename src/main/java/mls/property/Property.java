@@ -1,6 +1,10 @@
-package main.java;
+package main.java.mls.property;
 
-import java.util.HashMap;
+import main.java.mls.Address;
+import main.java.mls.Size;
+import main.java.mls.property.structure.Building;
+import main.java.mls.property.structure.exterior.Exterior;
+
 import java.util.List;
 
 public class Property {
@@ -24,4 +28,8 @@ public class Property {
 //        this.building = building;
 //        this.neighbourhood = neighbourhood;
 //    }
+
+    enum NeighbourhoodFeatures {
+        School, Subway, Hospital, Park
+    }
 }

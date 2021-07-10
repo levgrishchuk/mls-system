@@ -1,4 +1,6 @@
-package main.java;
+package main.java.mls;
+
+import main.java.mls.property.Property;
 
 import java.util.Date;
 import java.util.UUID;
@@ -14,12 +16,14 @@ public class Listing {
     private Participant propertyOwner;
     private Broker broker;
     private Participant buyer;
-    private String status;
+    private Status status;
 
     // methods
-    // getters
-    public String getStatus(){
-        return this.status;
+
+
+    // enum type
+    enum Status {
+        Active, Sold, Withdraw
     }
 
 }
