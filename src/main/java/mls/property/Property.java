@@ -1,9 +1,8 @@
-package main.java.mls.property;
+package mls.property;
 
-import main.java.mls.Address;
-import main.java.mls.Size;
-import main.java.mls.property.structure.Building;
-import main.java.mls.property.structure.exterior.Exterior;
+import mls.*;
+import mls.property.structure.*;
+import mls.property.structure.exterior.*;
 
 import java.util.List;
 

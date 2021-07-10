@@ -1,6 +1,6 @@
-package main.java.mls.property.structure.exterior;
+package mls.property.structure.exterior;
 
-import main.java.mls.property.structure.exterior.Exterior;
+import mls.property.structure.exterior.Exterior;
 
 public class Deck extends Exterior {
 }

@@ -1,6 +1,6 @@
-package main.java.mls.property.structure;
+package mls.property.structure;
 
-import main.java.mls.Size;
+import mls.Size;
 
 public class Room {
     private RoomType type;

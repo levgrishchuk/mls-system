@@ -1,6 +1,6 @@
-package main.java.mls;
+package mls;
 
-import main.java.mls.property.Property;
+import mls.property.*;
 
 import java.util.Date;
 import java.util.UUID;
