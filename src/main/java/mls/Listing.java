@@ -21,6 +21,45 @@ public class Listing {
     // no constructor (default)
 
     // methods
+    public UUID getMlsNumber() {
+        return mlsNumber;
+    }
+
+    public float getListingPrice() {
+        return listingPrice;
+    }
+
+    public Date getDateAdded() {
+        return dateAdded;
+    }
+
+    public Date getDateSold() {
+        return dateSold;
+    }
+
+    public Property getProperty() {
+        return property;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Participant getPropertyOwner() {
+        return propertyOwner;
+    }
+
+    public Broker getBroker() {
+        return broker;
+    }
+
+    public Participant getBuyer() {
+        return buyer;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
 
     // enum type
     enum Status {
