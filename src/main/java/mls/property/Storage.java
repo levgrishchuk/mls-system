@@ -1,6 +1,6 @@
-package main.java.mls.property;
+package mls.property;
 
-import main.java.mls.property.structure.exterior.Exterior;
+import mls.property.structure.exterior.*;
 
 public class Storage extends Exterior {
     // fields

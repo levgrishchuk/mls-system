@@ -1,4 +1,4 @@
-package main.java.mls;
+package mls;
 
 public class Participant {
     // fields

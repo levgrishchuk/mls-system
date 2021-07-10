@@ -1,6 +1,6 @@
-package main.java.mls.property.structure.exterior;
+package mls.property.structure.exterior;
 
-import main.java.mls.Size;
+import mls.Size;
 
 public abstract class Exterior {
     // fields

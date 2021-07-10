@@ -1,4 +1,4 @@
-package main.java.mls.property.structure;
+package mls.property.structure;
 
 import java.util.List;
 
