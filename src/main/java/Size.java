@@ -1,3 +1,5 @@
+package main.java;
+
 public class Size {
     // fields
     private Double length;

@@ -1,3 +1,5 @@
+package main.java;
+
 public class Participant {
     // fields
     private String name;

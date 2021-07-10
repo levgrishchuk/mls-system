@@ -1,3 +1,5 @@
+package main.java;
+
 public class Address {
     // fields
     private int streetNumber;
