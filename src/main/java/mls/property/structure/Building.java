@@ -41,6 +41,7 @@ public class Building {
 
     /**
      * Copy constructor
+     * Calls first constructor
      * @param building
      */
     public Building(Building building) {

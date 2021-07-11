@@ -32,6 +32,7 @@ final public class Address {
      * @param address
      */
     public Address(Address address) {
+
         this.streetNumber = address.streetNumber;
         this.streetName = address.streetName;
         this.city = address.city;

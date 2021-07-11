@@ -24,8 +24,8 @@ public class Room {
      * Copy constructor
      */
     public Room(Room room) {
-        this.type = room.getType();
-        this.size = getSize();
+        this(room.getType(),
+                room.getSize());
     }
 
     public RoomType getType() {
