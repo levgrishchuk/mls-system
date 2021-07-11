@@ -6,14 +6,36 @@ package mls;
  */
 
 public class Size {
-    // fields
-    private Double length;
-    private Double width;
-    private Double height;
-    private String unit; // imperial/metric
+    private final Double length;
+    private final Double width;
+    private final Double height;
+    private final String unit; // imperial/metric
 
-    // methods
-    // getters
+    /**
+     * Constructor
+     * @param length
+     * @param width
+     * @param height
+     * @param unit
+     */
+    public Size(Double length, Double width, Double height, String unit) {
+        this.length = length;
+        this.width = width;
+        this.height = height;
+        this.unit = unit;
+    }
+
+    /**
+     * Copy constructor
+     * @param size
+     */
+    public Size(Size size) {
+        this.length = size.length;
+        this.width = size.width;
+        this.height = size.height;
+        this.unit = size.unit;
+    }
+
     public Double getArea() {
         return this.length * this.width;
     }
@@ -32,23 +54,5 @@ public class Size {
 
     public String getUnit() {
         return unit;
-    }
-
-    // setters
-
-    public void setLength(Double length) {
-        this.length = length;
-    }
-
-    public void setWidth(Double width) {
-        this.width = width;
-    }
-
-    public void setHeight(Double height) {
-        this.height = height;
-    }
-
-    public void setUnit(String unit) {
-        this.unit = unit;
     }
 }
