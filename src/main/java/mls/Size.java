@@ -1,5 +1,10 @@
 package mls;
 
+/**
+ * Represents a Size object
+ * Immutable class (final fields, no setters, Deep Copy constructor)
+ */
+
 public class Size {
     // fields
     private Double length;

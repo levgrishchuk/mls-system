@@ -17,17 +17,6 @@ public class Property {
     private Building building;
     private List<NeighbourhoodFeatures> neighbourhood;
 
-//    public Property(HashMap<String, Object> record) {
-//        this.address = (Address) record.get("address");
-//        this.annualTax = annualTax;
-//        this.isUnderConstruction = isUnderConstruction;
-//        this.isNewConstruction = isNewConstruction;
-//        this.landSize = landSize;
-//        this.exteriors = exteriors;
-//        this.building = building;
-//        this.neighbourhood = neighbourhood;
-//    }
-
     enum NeighbourhoodFeatures {
         School, Subway, Hospital, Park
     }
