@@ -9,6 +9,15 @@ public class Brokerage {
     private Address address;
 
     /**
+     * Copy constructor
+     * @param brokerage
+     */
+    public Brokerage(Brokerage brokerage){
+        this.corporateName = brokerage.getCorporateName();
+        this.address = new Address(brokerage.getAddress());
+    }
+
+    /**
      * Gets the corporate name
      * @return A string representing the corporate name
      */

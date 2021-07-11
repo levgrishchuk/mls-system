@@ -12,7 +12,7 @@ public class Size {
     private final String unit; // imperial/metric
 
     /**
-     * Constructor
+     * A Constructor
      * @param length
      * @param width
      * @param height

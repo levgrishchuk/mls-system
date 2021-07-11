@@ -25,6 +25,16 @@ public class Participant {
         this.phone = phone;
     }
 
+    /**
+     * Copy constructor
+     */
+    public Participant(Participant participant) {
+        this.name = participant.getName();
+        this.address = new Address(participant.getAddress());
+        this.email = participant.getEmail();
+        this.phone = participant.getPhone();
+    }
+
     public Address getAddress(){
         return this.address;
     }

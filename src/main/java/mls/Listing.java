@@ -8,7 +8,7 @@ import java.util.UUID;
  * Represents a Listing
  * Mutable class
  * Builder design pattern (nested static Builder class)
- * Listing class uses a default constructor
+ * Listing class has a default constructor and a copy constructor
  * Nested enum type
  */
 public class Listing {
@@ -23,7 +23,24 @@ public class Listing {
     private Participant buyer;
     private Status status;
 
-    // no constructor (default)
+    public Listing(){} // default constructor
+
+    /**
+     * Copy constructor
+     * @param listing
+     */
+    public Listing(Listing listing) {
+        this.mlsNumber = listing.getMlsNumber();
+        this.listingPrice = listing.getListingPrice();
+        this.dateAdded = listing.getDateAdded();
+        this.dateSold = listing.getDateSold();
+        this.property = listing.getProperty();
+        this.description = listing.getDescription();
+        this.propertyOwner = listing.getPropertyOwner();
+        this.broker = listing.getBroker();
+        this.buyer = listing.getBuyer();
+        this.status = listing.getStatus();
+    }
 
     public UUID getMlsNumber() {
         return mlsNumber;
