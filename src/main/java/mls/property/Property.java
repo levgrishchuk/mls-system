@@ -4,26 +4,62 @@ import mls.*;
 import mls.property.structure.*;
 import mls.property.structure.exterior.*;
 
-import java.rmi.dgc.Lease;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Property {
-    // fields
     private Address address;
     private Double annualTax;
-    private boolean isUnderConstruction;
-    private boolean isNewConstruction;
+    private boolean isUnderConstruction = false;
     private Size landSize;
-    private List<Exterior> exteriors;
+    private List<Exterior> exteriors = new ArrayList<>();
     private Building building;
-    private List<NeighbourhoodFeatures> neighbourhood;
+    private List<NeighbourhoodFeatures> neighbourhood = new ArrayList<>();
     private LeaseInformation leaseInformation;
 
-    enum LeaseType { Freehold, Leasehold};
+    public enum LeaseType { Freehold, Leasehold};
 
-    enum NeighbourhoodFeatures {
+    public enum NeighbourhoodFeatures {
         School, Subway, Hospital, Park
     }
+
+    private Property() {};
+
+    /**
+     * Copy constructor
+     * @param property
+     */
+    public Property(Property property) {
+        this.setAddress(property.getAddress());
+        this.setAnnualTax(property.getAnnualTax());
+        this.setUnderConstruction(property.isUnderConstruction());
+        this.setLandSize(property.getLandSize());
+        this.setExteriors(property.getExteriors());
+        this.setBuilding(property.getBuilding());
+        this.setNeighbourhood(property.getNeighbourhood());
+
+        if (property.leaseInformation != null)
+            makeLeasehold(property.leaseInformation);
+    }
+
+    /**
+     * Builder constructor
+     * @param builder
+     */
+    protected Property(Property.Builder builder) {
+        this.address = builder.address;
+        this.annualTax = builder.annualTax;
+        this.isUnderConstruction = builder.isUnderConstruction;
+        this.landSize = builder.landSize;
+        this.exteriors = builder.exteriors;
+        this.building = builder.building;
+        this.neighbourhood = builder.neighbourhood;
+        this.leaseInformation = builder.leaseInformation;
+    }
+
+    /**
+     * Accessors and mutators
+     */
 
     public Address getAddress() {
         return address;
@@ -49,14 +85,6 @@ public class Property {
         isUnderConstruction = underConstruction;
     }
 
-    public boolean isNewConstruction() {
-        return isNewConstruction;
-    }
-
-    public void setNewConstruction(boolean newConstruction) {
-        isNewConstruction = newConstruction;
-    }
-
     public Size getLandSize() {
         return landSize;
     }
@@ -70,7 +98,8 @@ public class Property {
     }
 
     public void setExteriors(List<Exterior> exteriors) {
-        this.exteriors = exteriors;
+        this.exteriors.clear();
+        this.exteriors.addAll(exteriors);
     }
 
     public Building getBuilding() {
@@ -78,7 +107,7 @@ public class Property {
     }
 
     public void setBuilding(Building building) {
-        this.building = building;
+        this.building = new Building(building);
     }
 
     public List<NeighbourhoodFeatures> getNeighbourhood() {
@@ -86,7 +115,8 @@ public class Property {
     }
 
     public void setNeighbourhood(List<NeighbourhoodFeatures> neighbourhood) {
-        this.neighbourhood = neighbourhood;
+        this.neighbourhood.clear();
+        this.neighbourhood.addAll(neighbourhood);
     }
 
     /**
@@ -112,4 +142,93 @@ public class Property {
         return (this.leaseInformation == null) ? LeaseType.Freehold : LeaseType.Leasehold;
     }
 
+    /**
+     * Returns an instance of Property.Builder.
+     */
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    /**
+     * To string
+     * @return
+     */
+    @Override
+    public String toString() {
+        return "Property{" +
+                "address=" + address +
+                ", annualTax=" + annualTax +
+                ", isUnderConstruction=" + isUnderConstruction +
+                ", landSize=" + landSize +
+                ", exteriors=" + exteriors +
+                ", building=" + building +
+                ", neighbourhood=" + neighbourhood +
+                ", leaseInformation=" + leaseInformation +
+                '}';
+    }
+
+    /**
+     * PropertyBuilder class
+     */
+    public static class Builder<T extends Builder<T>> {
+        private Address address;
+        private Double annualTax;
+        private boolean isUnderConstruction = false;
+        private Size landSize;
+        private List<Exterior> exteriors = new ArrayList<>();
+        private Building building;
+        private List<NeighbourhoodFeatures> neighbourhood = new ArrayList<>();
+        private LeaseInformation leaseInformation;
+
+        public T address(Address address) {
+            this.address = address;
+            return (T) this;
+        }
+
+        public T annualTax(Double annualTax) {
+            this.annualTax = annualTax;
+            return (T) this;
+        }
+
+        public T underConstruction() {
+            this.isUnderConstruction = true;
+            return (T) this;
+        }
+
+        public T landSize(Size landSize) {
+            this.landSize = landSize;
+            return (T) this;
+        }
+
+        public T addExterior(Exterior exterior) {
+            this.exteriors.add(exterior);
+            return (T) this;
+        }
+
+        public T building(Building building) {
+            this.building = new Building(building);
+            return (T) this;
+        }
+
+        public T addNeighbourhood(NeighbourhoodFeatures neighbourhoodFeatures) {
+            this.neighbourhood.add(neighbourhoodFeatures);
+            return (T) this;
+        }
+
+        public T lease(LeaseInformation leaseInformation) {
+            this.leaseInformation = new LeaseInformation(leaseInformation);
+            return (T) this;
+        }
+
+        public Property build() {
+            // Validate
+            if (address == null ||
+                    annualTax <= 0 ||
+                    landSize == null
+            )
+                throw new RuntimeException("Some necessary fields contains invalid data.");
+
+            return new Property(this);
+        }
+    }
 }

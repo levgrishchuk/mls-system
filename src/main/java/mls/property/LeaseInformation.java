@@ -57,4 +57,16 @@ public class LeaseInformation {
 
         this.monthlyFee = monthlyFee;
     }
+
+    /**
+     * To string
+     * @return string
+     */
+    @Override
+    public String toString() {
+        return "LeaseInformation{" +
+                "landlord='" + landlord + '\'' +
+                ", monthlyFee=" + monthlyFee +
+                '}';
+    }
 }
