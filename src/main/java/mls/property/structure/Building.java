@@ -116,4 +116,8 @@ public class Building {
     enum BuildingCategory {
         HighValue, MultiGenerational
     }
+
+    public int getUnitCount() {
+        return unitCount;
+    }
 }
