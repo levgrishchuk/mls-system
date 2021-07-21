@@ -35,9 +35,6 @@ public class DBController {
      * finds listing by mls number
      * @param
      */
-    private static final Type BROKERAGE_TYPE = new TypeToken<List<Brokerage>>() {
-    }.getType();
-
     public void read() throws IOException {
         Gson gson = new Gson();
         // get path of A3 folder on your local machine
