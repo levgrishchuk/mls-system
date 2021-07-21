@@ -1,0 +1,14 @@
+[
+  {
+    "corporateName": "abc",
+    "address":
+      {
+        "streetNumber": 128,
+        "streetName": "xyz rd.",
+        "city": "Thornhill",
+        "province": "ON",
+        "postalCode": "1a2 b3c"
+      }
+
+  }
+]

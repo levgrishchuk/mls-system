@@ -4,6 +4,7 @@ import mls.Address;
 import mls.Size;
 import mls.property.structure.exterior.Exterior;
 import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeatures;
+import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeaturesContainer;
 
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class MobileHome extends Property {
     }
 
     @Override
-    public List<NeighbourhoodFeatures> getNeighbourhood() {
+    public NeighbourhoodFeaturesContainer getNeighbourhood() {
         throw new UnsupportedOperationException("Mobile homes don't have fixed neighbourhood.");
     }
 
@@ -53,7 +54,7 @@ public class MobileHome extends Property {
     }
 
     @Override
-    public void setNeighbourhood(List<NeighbourhoodFeatures> neighbourhood) {
+    public void setNeighbourhood(NeighbourhoodFeaturesContainer neighbourhood) {
         throw new UnsupportedOperationException("Mobile homes don't have fixed neighbourhood.");
     }
 

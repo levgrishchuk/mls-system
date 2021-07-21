@@ -4,6 +4,7 @@ import mls.*;
 import mls.property.structure.*;
 import mls.property.structure.exterior.*;
 import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeatures;
+import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeaturesContainer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ public class Property {
     private Size landSize;
     private List<Exterior> exteriors = new ArrayList<>();
     private Building building;
-    private List<NeighbourhoodFeatures> neighbourhood = new ArrayList<>();
+    private NeighbourhoodFeaturesContainer neighbourhood;
     private LeaseInformation leaseInformation;
 
     public enum LeaseType { Freehold, Leasehold};
@@ -109,13 +110,12 @@ public class Property {
         this.building = new Building(building);
     }
 
-    public List<NeighbourhoodFeatures> getNeighbourhood() {
+    public NeighbourhoodFeaturesContainer getNeighbourhood() {
         return neighbourhood;
     }
 
-    public void setNeighbourhood(List<NeighbourhoodFeatures> neighbourhood) {
-        this.neighbourhood.clear();
-        this.neighbourhood.addAll(neighbourhood);
+    public void setNeighbourhood(NeighbourhoodFeaturesContainer neighbourhood) {
+        this.neighbourhood.setNeighbourhood(neighbourhood);
     }
 
     /**
@@ -176,7 +176,7 @@ public class Property {
         private Size landSize;
         private List<Exterior> exteriors = new ArrayList<>();
         private Building building;
-        private List<NeighbourhoodFeatures> neighbourhood = new ArrayList<>();
+        private NeighbourhoodFeaturesContainer neighbourhood;
         private LeaseInformation leaseInformation;
 
         public T address(Address address) {
@@ -206,6 +206,11 @@ public class Property {
 
         public T building(Building building) {
             this.building = new Building(building);
+            return (T) this;
+        }
+
+        public T neighbourhoodFeature(List<NeighbourhoodFeatures> list){
+            this.neighbourhood = new NeighbourhoodFeaturesContainer(list);
             return (T) this;
         }
 
