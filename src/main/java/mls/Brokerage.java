@@ -8,6 +8,11 @@ public class Brokerage {
     private String corporateName;
     private Address address;
 
+    public Brokerage(String corporateName, Address address) {
+        this.corporateName = corporateName;
+        this.address = new Address(address);
+    }
+
     /**
      * Copy constructor
      * @param brokerage

@@ -16,42 +16,71 @@ public class Building {
     private List<String> appliances;
 
     /**
+     * enum type
+     */
+    public enum BuildingCategory {
+        HighValue, MultiGenerational, Other
+    }
+
+    /**
      * A constructor performing Deep Copy
      */
-    public Building(BuildingCategory category, int unitCount, int storyCount, List<Room> rooms, String exteriorDesign, boolean hasBasement, List<String> appliances) {
-        this.category = category;
-        this.unitCount = unitCount;
-        this.storyCount = storyCount;
-
-        // list deep copy
-        this.rooms = new ArrayList<>();
-        for(Room room : rooms){
-            this.rooms.add(new Room(room));
+    public Building(Building building) {
+        // error check, default value null
+        if (building.getCategory() != null){
+            this.category = building.getCategory();
+        }
+        else {
+            this.category = BuildingCategory.Other;
         }
 
-        this.exteriorDesign = exteriorDesign;
-        this.hasBasement = hasBasement;
+        this.unitCount = building.getUnitCount();
+        this.storyCount = building.getStoryCount();
 
         // list deep copy
-        this.appliances = new ArrayList<>();
-        for(String appliance : appliances){
-            this.appliances.add(appliance);
+        this.rooms = new ArrayList();
+        for(Object room : building.getRooms()){
+            this.rooms.add(new Room((Room) room));
+        }
+
+        this.exteriorDesign = building.getExteriorDesign();
+        this.hasBasement = building.HasBasement();
+
+        // list deep copy
+        this.appliances = new ArrayList();
+        for(Object appliance : building.getAppliances()){
+            this.appliances.add((String) appliance);
         }
     }
 
     /**
      * Copy constructor
-     * Calls first constructor
-     * @param building
      */
-    public Building(Building building) {
-        this(building.getCategory(),
-            building.getUnitCount(),
-            building.getStoryCount(),
-            building.getRooms(),
-            building.getExteriorDesign(),
-            building.HasBasement(),
-            building.getAppliances());
+    public Building(Builder builder) {
+        // error check, default value null
+        if (builder.category != null){
+            this.category = builder.category;
+        }
+        else {
+            this.category = BuildingCategory.Other;
+        }
+        this.unitCount = builder.unitCount;
+        this.storyCount = builder.storyCount;
+
+        // list deep copy
+        this.rooms = new ArrayList();
+        for(Object room : builder.rooms){
+            this.rooms.add(new Room((Room) room));
+        }
+
+        this.exteriorDesign = builder.exteriorDesign;
+        this.hasBasement = builder.hasBasement;
+
+        // list deep copy
+        this.appliances = new ArrayList();
+        for(Object appliance : builder.appliances){
+            this.appliances.add((String) appliance);
+        }
     }
 
     public BuildingCategory getCategory() {
@@ -67,7 +96,12 @@ public class Building {
     }
 
     public List<Room> getRooms() {
-        return rooms;
+        // list deep copy
+        List<Room> result = new ArrayList();
+        for(Object room : this.rooms){
+            result.add(new Room((Room) room));
+        }
+        return result;
     }
 
     public String getExteriorDesign() {
@@ -79,7 +113,12 @@ public class Building {
     }
 
     public List<String> getAppliances() {
-        return appliances;
+        // list deep copy
+        List<String> result = new ArrayList();
+        for(Object appliance : this.appliances){
+            result.add((String) appliance);
+        }
+        return result;
     }
 
     public void setCategory(BuildingCategory category) {
@@ -95,7 +134,16 @@ public class Building {
     }
 
     public void setRooms(List<Room> rooms) {
-        this.rooms = rooms;
+        // list deep copy
+        this.rooms = new ArrayList();
+        for(Object room : rooms){
+            this.rooms.add(new Room((Room) room));
+        }
+    }
+
+    public void addRoom(Room room){
+        // list deep copy
+        this.rooms.add(new Room(room));
     }
 
     public void setExteriorDesign(String exteriorDesign) {
@@ -107,17 +155,99 @@ public class Building {
     }
 
     public void setAppliances(List<String> appliances) {
-        this.appliances = appliances;
+        // list deep copy
+        this.appliances = new ArrayList();
+        for(Object appliance : appliances){
+            // String immutable, no need for new object
+            this.appliances.add((String) appliance);
+        }
     }
 
-    /**
-     * enum type
-     */
-    enum BuildingCategory {
-        HighValue, MultiGenerational
+    public void addAppliance(String appliance){
+        // String immutable, no need for new object
+        this.appliances.add(appliance);
     }
 
-    public int getUnitCount() {
-        return unitCount;
+    public static class Builder<T extends Builder<T>>{
+        private BuildingCategory category;
+        private int unitCount;
+        private int storyCount;
+        private List<Room> rooms;
+        private String exteriorDesign;
+        private boolean hasBasement;
+        private List<String> appliances;
+
+        private Builder(){} // private constructor
+
+        public Builder setCategory(BuildingCategory category) {
+            this.category = category;
+            return this;
+        }
+
+        public Builder setUnitCount(int unitCount) {
+            this.unitCount = unitCount;
+            return this;
+        }
+
+        public Builder setStoryCount(int storyCount) {
+            this.storyCount = storyCount;
+            return this;
+        }
+
+        public Builder setRooms(List<Room> rooms) {
+            // list deep copy
+            this.rooms = new ArrayList();
+            for(Object room : rooms){
+                this.rooms.add(new Room((Room) room));
+            }
+            return this;
+        }
+
+        public Builder addRoom(Room room){
+            // list deep copy
+            this.rooms.add(new Room(room));
+            return this;
+        }
+
+        public Builder setExteriorDesign(String exteriorDesign) {
+            // list deep copy
+            this.appliances = new ArrayList();
+            for(Object appliance : appliances){
+                // String immutable, no need for new object
+                this.appliances.add((String) appliance);
+            }
+            return this;
+        }
+
+
+
+        public Builder setHasBasement(boolean hasBasement) {
+            this.hasBasement = hasBasement;
+            return this;
+        }
+
+        public Builder setAppliances(List<String> appliances) {
+            this.appliances = appliances;
+            return this;
+        }
+
+        public Builder addAppliance(String appliance){
+            // String immutable, no need for new object
+            this.appliances.add(appliance);
+            return this;
+        }
+
+        /**
+         * Build method
+         * @return building instance
+         * @throws RuntimeException if fields are not set correctly
+         */
+        public Building build(){
+            if(this.unitCount <= 0 ||
+            this.storyCount <= 0){
+                throw new RuntimeException("Please enter positive integers for unit count and story count");
+            }
+            return new Building(this);
+        }
     }
 }

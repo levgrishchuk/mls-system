@@ -3,6 +3,7 @@ package mls.property;
 import mls.Address;
 import mls.Size;
 import mls.property.structure.exterior.Exterior;
+import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeatures;
 
 import java.util.List;
 

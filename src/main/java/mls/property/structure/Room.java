@@ -10,6 +10,13 @@ public class Room {
     private Size size;
 
     /**
+     * enum type
+     */
+    public enum RoomType {
+        Living, Dining, Bed, Bath, Laundry, Recreational
+    }
+
+    /**
      * A constructor performing Deep Copy
      * No need to make new object for Size b/c it is immutable
      * @param type
@@ -44,10 +51,5 @@ public class Room {
         this.size = size;
     }
 
-    /**
-     * enum type
-     */
-    enum RoomType {
-        Living, Dining, Bed, Bath, Laundry, Recreational
-    }
+
 }

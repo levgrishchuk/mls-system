@@ -8,7 +8,6 @@ package mls;
 public class Size {
     private final Double length;
     private final Double width;
-    private final Double height;
     private final String unit; // imperial/metric
 
     /**
@@ -21,7 +20,6 @@ public class Size {
     public Size(Double length, Double width, Double height, String unit) {
         this.length = length;
         this.width = width;
-        this.height = height;
         this.unit = unit;
     }
 
@@ -32,7 +30,6 @@ public class Size {
     public Size(Size size) {
         this.length = size.length;
         this.width = size.width;
-        this.height = size.height;
         this.unit = size.unit;
     }
 
@@ -46,10 +43,6 @@ public class Size {
 
     public Double getWidth() {
         return width;
-    }
-
-    public Double getHeight() {
-        return height;
     }
 
     public String getUnit() {

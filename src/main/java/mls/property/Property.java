@@ -3,6 +3,7 @@ package mls.property;
 import mls.*;
 import mls.property.structure.*;
 import mls.property.structure.exterior.*;
+import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeatures;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +20,7 @@ public class Property {
 
     public enum LeaseType { Freehold, Leasehold};
 
-    public enum NeighbourhoodFeatures {
-        School, Subway, Hospital, Park
-    }
+
 
     private Property() {};
 

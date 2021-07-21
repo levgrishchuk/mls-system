@@ -1,4 +1,5 @@
 package mls;
+import com.google.gson.JsonObject;
 import mls.property.*;
 import java.util.Date;
 import java.util.UUID;
@@ -22,25 +23,50 @@ public class Listing {
     private Participant buyer;
     private Status status;
 
+    /**
+     * enum type used for Status field
+     */
+    public enum Status {
+        Active, Sold, Withdraw
+    }
+
     public Listing(){} // default constructor
 
     /**
-     * Copy constructor
-     * @param listing
+     * Builder constructor, see Builder class below
      */
-    public Listing(Listing listing) {
-        this.mlsNumber = listing.getMlsNumber();
-        this.listingPrice = listing.getListingPrice();
-        this.dateAdded = listing.getDateAdded();
-        this.dateSold = listing.getDateSold();
-        this.property = listing.getProperty();
-        this.description = listing.getDescription();
-        this.propertyOwner = listing.getPropertyOwner();
-        this.broker = listing.getBroker();
-        this.buyer = listing.getBuyer();
-        this.status = listing.getStatus();
+    public Listing(Listing.Builder builder) {
+        this.mlsNumber = builder.mlsNumber;
+        this.listingPrice = builder.listingPrice;
+        this.dateAdded = builder.dateAdded;
+        this.dateSold = builder.dateSold;
+        this.property = builder.property;
+        this.description = builder.description;
+        this.propertyOwner = builder.propertyOwner;
+        this.broker = builder.broker;
+        this.buyer = builder.buyer;
+        this.status = builder.status;
     }
 
+    /**
+     * Copy constructor
+     */
+    public Listing(Listing other) {
+        this.mlsNumber = other.mlsNumber;
+        this.listingPrice = other.listingPrice;
+        this.dateAdded = other.dateAdded;
+        this.dateSold = other.dateSold;
+        this.property = other.property;
+        this.description = other.description;
+        this.propertyOwner = other.propertyOwner;
+        this.broker = other.broker;
+        this.buyer = other.buyer;
+        this.status = other.status;
+    }
+
+    /**
+     * getters and setters
+     */
     public UUID getMlsNumber() {
         return mlsNumber;
     }
@@ -122,19 +148,11 @@ public class Listing {
     }
 
     /**
-     * enum type used for Status field
-     */
-    enum Status {
-        Active, Sold, Withdraw
-    }
-
-    /**
      * Nested static Builder class (Builder design)
      * Each setter method returns the Builder instance
-     * The Build() method assigns the set fields of the Builder to a new Listing object
+     * The Build() method calls a Listing constructor with it's fields
      */
-    public static class Builder {
-        // fields
+    public static class Builder<T extends Property.Builder<T>> {
         private UUID mlsNumber;
         private float listingPrice;
         private Date dateAdded;
@@ -145,14 +163,6 @@ public class Listing {
         private Broker broker;
         private Participant buyer;
         private Status status;
-
-        /**
-         * Builder constructor
-         * @param mlsNumber A UUID
-         */
-        public Builder(UUID mlsNumber){
-            this.mlsNumber = mlsNumber;
-        }
 
         /**
          * An example of a setter method
@@ -212,20 +222,14 @@ public class Listing {
         /**
          * Assigns all fields of the current Builder instance to a new Listing object
          * @return A Listing object
+         * @throws RuntimeException when listing price <= 0
          */
         public Listing build() {
-            Listing mls = new Listing();
-            mls.mlsNumber = this.mlsNumber;
-            mls.listingPrice = this.listingPrice;
-            mls.dateAdded = this.dateAdded;
-            mls.dateSold = this.dateSold;
-            mls.property = this.property;
-            mls.description = this.description;
-            mls.propertyOwner = this.propertyOwner;
-            mls.broker = this.broker;
-            mls.buyer = this.buyer;
-            mls.status = this.status;
-            return mls;
+
+            if (this.listingPrice <= 0.0){
+                throw new RuntimeException("listing price must be positive");
+            }
+            return new Listing(this);
         }
     }
 
