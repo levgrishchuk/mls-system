@@ -8,4 +8,12 @@ public class Lawn extends Exterior {
     public Lawn(Size size) {
         super(size);
     }
+
+    /**
+     * copy constructor
+     * @param other
+     */
+    public Lawn(Lawn other){
+        super(other);
+    }
 }

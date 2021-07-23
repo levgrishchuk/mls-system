@@ -9,6 +9,14 @@ public abstract class Exterior {
         this.size = null;
     }
 
+    /**
+     * copy constructor
+     * @param exterior
+     */
+    public Exterior(Exterior exterior){
+        this.size = exterior.size;
+    }
+
     public Exterior(Size size){
         this.size = size;
     }

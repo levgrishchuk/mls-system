@@ -9,4 +9,12 @@ public class Deck extends Exterior {
         super(size);
     }
 
+    /**
+     * copy constructor
+     * @param other
+     */
+    public Deck(Deck other){
+        super(other);
+    }
+
 }

@@ -8,4 +8,12 @@ public class Pool extends Exterior {
     public Pool(Size size) {
         super(size);
     }
+
+    /**
+     * copy constructor
+     * @param other
+     */
+    public Pool(Pool other){
+        super(other);
+    }
 }

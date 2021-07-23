@@ -17,4 +17,30 @@ public class Parking extends Exterior {
         this.type = type;
         this.carSpace = carSpace;
     }
+
+    /**
+     * copy constructor
+     * @param other
+     */
+    public Parking(Parking other){
+        super(other);
+        this.type = other.getType();
+        this.carSpace = other.carSpace;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getCarSpace() {
+        return carSpace;
+    }
+
+    public void setCarSpace(int carSpace) {
+        this.carSpace = carSpace;
+    }
 }
