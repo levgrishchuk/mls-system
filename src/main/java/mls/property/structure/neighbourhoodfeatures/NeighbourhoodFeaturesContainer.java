@@ -60,6 +60,10 @@ public class NeighbourhoodFeaturesContainer {
         public void addNeighbourhoodFeature(NeighbourhoodFeatures feature){
             this.neighbourhoodFeaturesList.add(feature.makeCopy());
         }
+
+        public NeighbourhoodFeaturesContainer build(){
+            return new NeighbourhoodFeaturesContainer(this);
+        }
     }
 
 }

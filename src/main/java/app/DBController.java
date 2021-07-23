@@ -45,6 +45,9 @@ public class DBController {
         Brokerage[] data = gson.fromJson(reader, Brokerage[].class);
 
         System.out.println(data[0].getCorporateName() + '\n' + data[0].getAddress());
+//        prints correctly:
+//        abc
+//        mls.Address@68837a77
 
 
     }
