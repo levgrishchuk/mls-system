@@ -4,7 +4,7 @@ import mls.Size;
 
 public class Backyard extends Exterior {
     public Backyard(){}
-    public Backyard(Exterior exterior) {
-        super(exterior);
+    public Backyard(Size size) {
+        super(size);
     }
 }

@@ -1,4 +1,6 @@
 package mls.property.structure;
+import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeatures;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -166,6 +168,43 @@ public class Building {
     public void addAppliance(String appliance){
         // String immutable, no need for new object
         this.appliances.add(appliance);
+    }
+
+    public boolean equals(Building other){
+        // compare addresses
+        if(this == other){
+            return true;
+        }
+
+        // results accumulated here
+        boolean flag = true;
+
+        // compare simple attributes
+        flag = flag &&
+                (this.getCategory() == other.getCategory()) &&
+                (this.getStoryCount() == other.getUnitCount()) &&
+                (this.getStoryCount() == other.getStoryCount()) &&
+                (this.HasBasement() == other.HasBasement()) &&
+                (this.getExteriorDesign() == other.getExteriorDesign()) &&
+                (this.getAppliances().equals(other.getAppliances()));
+
+        // compare rooms lists
+        // compare addresses
+        if(this.getRooms() == other.getRooms()){
+            return flag && true;
+        }
+
+        // temp copy
+        List<Room> temp = new ArrayList<Room>(this.getRooms());
+        for(Room room: other.getRooms()){
+            // if no match, return not equal
+            if(!(temp.remove(room))){
+                return false;
+            }
+        }
+
+        // true if complete match
+        return flag && temp.isEmpty();
     }
 
     public static class Builder {

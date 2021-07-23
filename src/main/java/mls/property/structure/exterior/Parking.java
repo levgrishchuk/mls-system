@@ -1,5 +1,6 @@
 package mls.property.structure.exterior;
 
+import mls.Size;
 import mls.property.structure.exterior.Exterior;
 
 public class Parking extends Exterior {
@@ -11,8 +12,8 @@ public class Parking extends Exterior {
      */
     public Parking(){}
 
-    public Parking(Exterior exterior, String type, int carSpace) {
-        super(exterior);
+    public Parking(Size size, String type, int carSpace) {
+        super(size);
         this.type = type;
         this.carSpace = carSpace;
     }

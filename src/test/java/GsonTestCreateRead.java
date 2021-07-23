@@ -1,21 +1,16 @@
-import app.DBController;
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import mls.*;
 import mls.property.Farmhouse;
 import mls.property.LeaseInformation;
 import mls.property.Property;
 import mls.property.structure.Building;
 import mls.property.structure.Room;
-import mls.property.structure.exterior.Backyard;
 import mls.property.structure.exterior.Exterior;
 import mls.property.structure.exterior.Lawn;
 import mls.property.structure.exterior.Pool;
-import mls.property.structure.neighbourhoodfeatures.Hospital;
 import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeatures;
 import mls.property.structure.neighbourhoodfeatures.School;
-import org.springframework.hateoas.mediatype.alps.Ext;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -34,8 +29,9 @@ public class GsonTestCreateRead {
 
             Gson gson = new GsonBuilder()
                     .setPrettyPrinting()
-                    .registerTypeAdapter(Exterior.class, new InterfaceAdapter<Exterior>())
-                    .registerTypeAdapter(NeighbourhoodFeatures.class, new InterfaceAdapter<NeighbourhoodFeatures>())
+                    .registerTypeAdapter(Exterior.class, new typeAdapter<Exterior>())
+                    .registerTypeAdapter(NeighbourhoodFeatures.class, new typeAdapter<NeighbourhoodFeatures>())
+                    .registerTypeAdapter(Property.class, new typeAdapter<Property>())
                     .create();
 
             Farmhouse f = Farmhouse.builder()
@@ -94,11 +90,15 @@ public class GsonTestCreateRead {
         }
     }
 
-    public static class InterfaceAdapter<T>
+    /**
+     * For serializing/deserializing abstract/interface/super classes
+     * @param <T>
+     */
+    public static class typeAdapter<T>
             implements JsonSerializer<T>, JsonDeserializer<T> {
 
         @Override
-        public final JsonElement serialize(final T object, final Type interfaceType, final JsonSerializationContext context)
+        public final JsonElement serialize(final T object, final Type type, final JsonSerializationContext context)
         {
             final JsonObject member = new JsonObject();
 
@@ -110,7 +110,7 @@ public class GsonTestCreateRead {
         }
 
         @Override
-        public final T deserialize(final JsonElement elem, final Type interfaceType, final JsonDeserializationContext context)
+        public final T deserialize(final JsonElement elem, final Type type, final JsonDeserializationContext context)
                 throws JsonParseException
         {
             final JsonObject member = (JsonObject) elem;
@@ -154,8 +154,9 @@ public class GsonTestCreateRead {
     public static void read() throws IOException {
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
-                .registerTypeAdapter(Exterior.class, new InterfaceAdapter<Exterior>())
-                .registerTypeAdapter(NeighbourhoodFeatures.class, new InterfaceAdapter<NeighbourhoodFeatures>())
+                .registerTypeAdapter(Exterior.class, new typeAdapter<Exterior>())
+                .registerTypeAdapter(NeighbourhoodFeatures.class, new typeAdapter<NeighbourhoodFeatures>())
+                .registerTypeAdapter(Property.class, new typeAdapter<Property>())
                 .create();
         // get path of A3 folder on your local machine
         String filePath = new File("").getAbsolutePath();
