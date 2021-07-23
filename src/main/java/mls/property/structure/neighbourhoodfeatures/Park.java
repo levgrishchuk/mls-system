@@ -3,6 +3,11 @@ package mls.property.structure.neighbourhoodfeatures;
 public class Park implements NeighbourhoodFeatures {
     private String link;
 
+    public Park(){}
+    public Park(String link){
+        this.link = link;
+    }
+
     public Park(Park other) {
         this.link = other.link;
     }

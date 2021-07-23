@@ -8,12 +8,16 @@ public class Hospital implements NeighbourhoodFeatures {
     private String link;
     private String phoneNumber;
 
-
-    public Hospital(Builder builder){
-        this.link = builder.link;
-        this.phoneNumber = builder.phoneNumber;
+    public Hospital(){}
+    public Hospital(String link, String phoneNumber){
+        this.link = link;
+        this.phoneNumber = phoneNumber;
     }
 
+    /**
+     * copy constructor
+     * @param other
+     */
     public Hospital(Hospital other) {
         this.link = other.link;
         this.phoneNumber = other.phoneNumber;
@@ -39,22 +43,5 @@ public class Hospital implements NeighbourhoodFeatures {
         return new Hospital(this);
     }
 
-    public static class Builder<T extends Builder<T>>{
-        private String link;
-        private String phoneNumber;
 
-        public Builder setPhoneNumber(String phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
-        }
-
-        public Builder setLink(String link){
-            this.link = link;
-            return this;
-        }
-
-        public Hospital build(){
-            return new Hospital(this);
-        }
-    }
 }

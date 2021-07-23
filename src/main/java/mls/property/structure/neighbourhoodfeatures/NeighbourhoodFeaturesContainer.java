@@ -7,15 +7,15 @@ import java.util.List;
  * Stores list of neighbourhood features
  */
 public class NeighbourhoodFeaturesContainer {
-    private List<NeighbourhoodFeatures> neighbourhoodFeaturesList;
+    private List<NeighbourhoodFeatures> neighbourhoodFeaturesList = new ArrayList();
 
-    public NeighbourhoodFeaturesContainer(Builder builder){
-        this.neighbourhoodFeaturesList = builder.neighbourhoodFeaturesList;
+    public NeighbourhoodFeaturesContainer(){
+        this.neighbourhoodFeaturesList = new ArrayList<>();
     }
 
     public NeighbourhoodFeaturesContainer(List<NeighbourhoodFeatures> list){
         // list deep copy
-        this.neighbourhoodFeaturesList = new ArrayList();
+        this.neighbourhoodFeaturesList = new ArrayList<>();
         for(int i = 0 ; i < list.size(); i++){
             this.neighbourhoodFeaturesList.add(list.get(i).makeCopy());
         }
@@ -37,29 +37,4 @@ public class NeighbourhoodFeaturesContainer {
             this.neighbourhoodFeaturesList.add(list.get(i).makeCopy());
         }
     }
-
-    /**
-     * builder class
-     * @param <T>
-     */
-    public static class Builder<T extends Builder<T>>{
-        private List<NeighbourhoodFeatures> neighbourhoodFeaturesList;
-
-        /**
-         * loops through list and adds copy of each feature
-         * @param list
-         */
-        public void setNeighbourhoodFeaturesList(List<NeighbourhoodFeatures> list){
-            // list deep copy
-            this.neighbourhoodFeaturesList = new ArrayList();
-            for(int i = 0 ; i < list.size(); i++){
-                this.neighbourhoodFeaturesList.add(list.get(i).makeCopy());
-            }
-        }
-
-        public void addNeighbourhoodFeature(NeighbourhoodFeatures feature){
-            this.neighbourhoodFeaturesList.add(feature.makeCopy());
-        }
-    }
-
 }

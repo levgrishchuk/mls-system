@@ -42,7 +42,7 @@ public class GsonTest {
                             ),
                             "Brick",
                             false,
-                            Arrays.asList("Waching machine", "Dish washer")
+                            Arrays.asList("Washing machine", "Dish washer")
                 ))
                 .addNeighbourhood(Property.NeighbourhoodFeatures.Hospital)
                 .addNeighbourhood(Property.NeighbourhoodFeatures.School)

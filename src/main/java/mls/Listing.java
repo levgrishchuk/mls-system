@@ -27,7 +27,7 @@ public class Listing {
      * enum type used for Status field
      */
     public enum Status {
-        Active, Sold, Withdraw
+        Active, Sold, Withdraw, Unknown
     }
 
     public Listing(){} // default constructor
@@ -162,7 +162,7 @@ public class Listing {
         private Participant propertyOwner;
         private Broker broker;
         private Participant buyer;
-        private Status status;
+        private Status status = Status.Unknown;
 
         /**
          * An example of a setter method

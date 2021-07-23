@@ -4,10 +4,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonReader;
 import mls.*;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
+import mls.property.structure.exterior.Backyard;
+
+import java.io.*;
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.UUID;
@@ -29,6 +28,17 @@ public class DBController {
             instance = new DBController();
         }
         return instance;
+    }
+
+    public void create() throws IOException {
+        // get path of A3 folder on your local machine
+        String filePath = new File("").getAbsolutePath();
+        // make reader using what is effectively relative pathing
+        JsonReader reader = new JsonReader(new FileReader(filePath + "/src/main/resources/data.json"));
+
+        Backyard test = new Backyard();
+
+
     }
 
     /**
