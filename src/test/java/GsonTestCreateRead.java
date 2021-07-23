@@ -66,8 +66,8 @@ public class GsonTestCreateRead {
                         )
                         .build()
                 )
-                .addNeighbourhood(new Hospital())
-                .addNeighbourhood(new School())
+                .addNeighbourhoodFeature(new Hospital())
+                .addNeighbourhoodFeature(new School())
                 .lease(new LeaseInformation("Strata", 550.0))
                 .build();
 
@@ -87,6 +87,7 @@ public class GsonTestCreateRead {
                 .build();
 
         JsonObject o = (JsonObject) gson.toJsonTree(l);
+        System.out.println(o);
 
 
     }
