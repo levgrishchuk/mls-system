@@ -168,7 +168,7 @@ public class Building {
         this.appliances.add(appliance);
     }
 
-    public static class Builder {
+    public static class Builder<T extends Builder<T>> {
         private BuildingCategory category = BuildingCategory.Other;
         private int unitCount;
         private int storyCount;
@@ -177,60 +177,54 @@ public class Building {
         private boolean hasBasement;
         private List<String> appliances = new ArrayList<>();
 
-        public Builder setCategory(BuildingCategory category) {
+        public T setCategory(BuildingCategory category) {
             this.category = category;
-            return this;
+            return (T) this;
         }
 
-        public Builder setUnitCount(int unitCount) {
+        public T setUnitCount(int unitCount) {
             this.unitCount = unitCount;
-            return this;
+            return (T) this;
         }
 
-        public Builder setStoryCount(int storyCount) {
+        public T setStoryCount(int storyCount) {
             this.storyCount = storyCount;
-            return this;
+            return (T) this;
         }
 
-        public Builder setRooms(List<Room> rooms) {
+        public T setRooms(List<Room> rooms) {
             // list deep copy
             this.rooms = new ArrayList<>();
             for(Room room : rooms){
                 this.rooms.add(new Room(room));
             }
-            return this;
+            return (T) this;
         }
 
-        public Builder addRoom(Room room){
+        public T addRoom(Room room){
             // list deep copy
             this.rooms.add(new Room(room));
-            return this;
+            return (T) this;
         }
 
-        public Builder setExteriorDesign(String exteriorDesign) {
-            // list deep copy
-            this.appliances = new ArrayList<>();
-            for(String appliance : appliances){
-                // String immutable, no need for new object
-                this.appliances.add(appliance);
-            }
-            return this;
+        public T setExteriorDesign(String exteriorDesign) {
+            this.exteriorDesign = exteriorDesign;
         }
 
-        public Builder setHasBasement(boolean hasBasement) {
+        public T setHasBasement(boolean hasBasement) {
             this.hasBasement = hasBasement;
-            return this;
+            return (T) this;
         }
 
-        public Builder setAppliances(List<String> appliances) {
+        public T setAppliances(List<String> appliances) {
             this.appliances = appliances;
-            return this;
+            return (T) this;
         }
 
-        public Builder addAppliance(String appliance){
+        public T addAppliance(String appliance){
             // String immutable, no need for new object
             this.appliances.add(appliance);
-            return this;
+            return (T) this;
         }
 
         /**

@@ -29,33 +29,4 @@ public class DBController {
         }
         return instance;
     }
-
-    public void create() throws IOException {
-        // get path of A3 folder on your local machine
-        String filePath = new File("").getAbsolutePath();
-        // make reader using what is effectively relative pathing
-        JsonReader reader = new JsonReader(new FileReader(filePath + "/src/main/resources/data.json"));
-
-        Backyard test = new Backyard();
-
-
-    }
-
-    /**
-     * finds listing by mls number
-     * @param
-     */
-    public void read() throws IOException {
-        Gson gson = new Gson();
-        // get path of A3 folder on your local machine
-        String filePath = new File("").getAbsolutePath();
-        // make reader using what is effectively relative pathing
-        JsonReader reader = new JsonReader(new FileReader(filePath + "/src/main/resources/data.json"));
-
-        Brokerage[] data = gson.fromJson(reader, Brokerage[].class);
-
-        System.out.println(data[0].getCorporateName() + '\n' + data[0].getAddress());
-
-
-    }
 }
