@@ -16,10 +16,7 @@ import mls.property.structure.exterior.Pool;
 import mls.property.structure.neighbourhoodfeatures.Hospital;
 import mls.property.structure.neighbourhoodfeatures.School;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.UUID;
@@ -30,66 +27,66 @@ public class GsonTestCreateRead {
         // get path of A3 folder on your local machine
         String filePath = new File("").getAbsolutePath();
         // make reader using what is effectively relative pathing
-//        try (JsonWriter writer = new JsonWriter(new FileWriter(filePath + "/src/main/resources/data.json"))) {
-//        }
+        try (Writer writer = new FileWriter(filePath + "/src/test/java/sampleData.json")) {
 
 
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        Farmhouse f = Farmhouse.builder()
-                .address(new Address(3495,
-                        "Lawrence Ave.",
-                        "Toronto",
-                        "Ontario",
-                        "M1H 1B3"))
-                .annualTax(1200.00)
-                .landSize(new Size(10.0, 10.0, 10.0, "meter"))
-                .addExterior(new Lawn())
-                .addExterior(new Pool())
-                .building(new Building.Builder()
-                        .setCategory(Building.BuildingCategory.MultiGenerational)
-                        .setUnitCount(1)
-                        .setStoryCount(1)
-                        .setRooms(Arrays.asList(
-                                new Room(Room.RoomType.Bed,
-                                        new Size(10.0, 10.0, 10.0, "meter")),
-                                new Room(Room.RoomType.Bath,
-                                        new Size(10.0, 10.0, 10.0, "meter"))
+            Farmhouse f = Farmhouse.builder()
+                    .address(new Address(3495,
+                            "Lawrence Ave.",
+                            "Toronto",
+                            "Ontario",
+                            "M1H 1B3"))
+                    .annualTax(1200.00)
+                    .landSize(new Size(10.0, 10.0, 10.0, "meter"))
+                    .addExterior(new Lawn())
+                    .addExterior(new Pool())
+                    .building(new Building.Builder()
+                            .setCategory(Building.BuildingCategory.MultiGenerational)
+                            .setUnitCount(1)
+                            .setStoryCount(1)
+                            .setRooms(Arrays.asList(
+                                    new Room(Room.RoomType.Bed,
+                                            new Size(10.0, 10.0, 10.0, "meter")),
+                                    new Room(Room.RoomType.Bath,
+                                            new Size(10.0, 10.0, 10.0, "meter"))
+                                    )
                             )
-                        )
-                        .setExteriorDesign("Brick")
-                        .setHasBasement(false)
-                        .setAppliances(Arrays.asList(
-                                "Washing machine",
-                                "Dish washer"
+                            .setExteriorDesign("Brick")
+                            .setHasBasement(false)
+                            .setAppliances(Arrays.asList(
+                                    "Washing machine",
+                                    "Dish washer"
+                                    )
                             )
-                        )
-                        .build()
-                )
-                .addNeighbourhoodFeature(new Hospital())
-                .addNeighbourhoodFeature(new School())
-                .lease(new LeaseInformation("Strata", 550.0))
-                .build();
+                            .build()
+                    )
+                    .addNeighbourhoodFeature(new Hospital())
+                    .addNeighbourhoodFeature(new School())
+                    .lease(new LeaseInformation("Strata", 550.0))
+                    .build();
 
-        Listing l = new Listing.Builder()
-                .setMlsNumber(UUID.randomUUID())
-                .setListingPrice(1000000.0F)
-                .setDateAdded(new Date())
-                .setProperty(f)
-                .setDescription("Nice farmhouse.")
-                .setPropertyOwner(new Participant(
-                        "Me",
-                        new Address(1, "2", "3", "4", "5"),
-                        "abc@gmail.com",
-                        "123-345-5678"
-                ))
-                .setStatus(Listing.Status.Active)
-                .build();
+            Listing l = new Listing.Builder()
+                    .setMlsNumber(UUID.randomUUID())
+                    .setListingPrice(1000000.0F)
+                    .setDateAdded(new Date())
+                    .setProperty(f)
+                    .setDescription("Nice farmhouse.")
+                    .setPropertyOwner(new Participant(
+                            "Me",
+                            new Address(1, "2", "3", "4", "5"),
+                            "abc@gmail.com",
+                            "123-345-5678"
+                    ))
+                    .setStatus(Listing.Status.Active)
+                    .build();
 
 //        JsonObject o = (JsonObject) gson.toJsonTree(l);
-        System.out.println(gson.toJson(l));
+            gson.toJson(l, writer);
+            System.out.println(gson.toJson(l));
 
-
+        }
     }
 
     /**
@@ -101,18 +98,18 @@ public class GsonTestCreateRead {
         // get path of A3 folder on your local machine
         String filePath = new File("").getAbsolutePath();
         // make reader using what is effectively relative pathing
-        JsonReader reader = new JsonReader(new FileReader(filePath + "/src/main/resources/data.json"));
+        JsonReader reader = new JsonReader(new FileReader(filePath + "/src/test/java/sampleData.json"));
 
-        Brokerage[] data = gson.fromJson(reader, Brokerage[].class);
+        Listing data = gson.fromJson(reader, Listing.class);
 
-        System.out.println(data[0].getCorporateName() + '\n' + data[0].getAddress());
+        System.out.println(data.getProperty());
 
 
     }
 
     public static void main(String[] args) throws IOException {
 
-        GsonTestCreateRead.create();
+        GsonTestCreateRead.read();
 
 
 
