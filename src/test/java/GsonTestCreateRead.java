@@ -34,7 +34,7 @@ public class GsonTestCreateRead {
 //        }
 
 
-        Gson gson = new GsonBuilder().create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         Farmhouse f = Farmhouse.builder()
                 .address(new Address(3495,
@@ -86,8 +86,8 @@ public class GsonTestCreateRead {
                 .setStatus(Listing.Status.Active)
                 .build();
 
-        JsonObject o = (JsonObject) gson.toJsonTree(l);
-        System.out.println(o);
+//        JsonObject o = (JsonObject) gson.toJsonTree(l);
+        System.out.println(gson.toJson(l));
 
 
     }
