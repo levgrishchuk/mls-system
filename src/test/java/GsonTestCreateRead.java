@@ -13,6 +13,8 @@ import mls.property.structure.Room;
 import mls.property.structure.exterior.Backyard;
 import mls.property.structure.exterior.Lawn;
 import mls.property.structure.exterior.Pool;
+import mls.property.structure.neighbourhoodfeatures.Hospital;
+import mls.property.structure.neighbourhoodfeatures.School;
 
 import java.io.File;
 import java.io.FileReader;
@@ -28,8 +30,8 @@ public class GsonTestCreateRead {
         // get path of A3 folder on your local machine
         String filePath = new File("").getAbsolutePath();
         // make reader using what is effectively relative pathing
-        try (JsonWriter writer = new JsonWriter(new FileWriter(filePath + "/src/main/resources/data.json"))) {
-        }
+//        try (JsonWriter writer = new JsonWriter(new FileWriter(filePath + "/src/main/resources/data.json"))) {
+//        }
 
 
         Gson gson = new GsonBuilder().create();
@@ -64,12 +66,13 @@ public class GsonTestCreateRead {
                         )
                         .build()
                 )
-                .addNeighbourhood(Property.NeighbourhoodFeatures.Hospital)
-                .addNeighbourhood(Property.NeighbourhoodFeatures.School)
+                .addNeighbourhood(new Hospital())
+                .addNeighbourhood(new School())
                 .lease(new LeaseInformation("Strata", 550.0))
                 .build();
 
-        Listing l = new Listing.Builder(UUID.randomUUID())
+        Listing l = new Listing.Builder()
+                .setMlsNumber(UUID.randomUUID())
                 .setListingPrice(1000000.0F)
                 .setDateAdded(new Date())
                 .setProperty(f)
@@ -108,7 +111,7 @@ public class GsonTestCreateRead {
 
     public static void main(String[] args) throws IOException {
 
-        GsonTestCreateRead.read();
+        GsonTestCreateRead.create();
 
 
 
