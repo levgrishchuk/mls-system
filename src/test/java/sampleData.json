@@ -1,7 +1,7 @@
 {
-  "mlsNumber": "0b49bb9a-04e0-4937-96d0-d3d803b94b9a",
+  "mlsNumber": "6ef4f681-ea4f-47e4-b564-ffa60938b874",
   "listingPrice": 1000000.0,
-  "dateAdded": "Jul 23, 2021, 3:55:03 PM",
+  "dateAdded": "Jul 23, 2021, 5:23:46 PM",
   "property": {
     "barn": false,
     "courtyard": false,
@@ -21,10 +21,16 @@
     },
     "exteriors": [
       {
-        "type": "Other"
+        "type": "mls.property.structure.exterior.Lawn",
+        "data": {
+          "type": "Other"
+        }
       },
       {
-        "type": "Other"
+        "type": "mls.property.structure.exterior.Pool",
+        "data": {
+          "type": "Other"
+        }
       }
     ],
     "building": {
@@ -58,8 +64,13 @@
     },
     "neighbourhood": {
       "neighbourhoodFeaturesList": [
-        {},
-        {}
+        {
+          "type": "mls.property.structure.neighbourhoodfeatures.School",
+          "data": {
+            "link": "",
+            "phoneNumber": ""
+          }
+        }
       ]
     },
     "leaseInformation": {

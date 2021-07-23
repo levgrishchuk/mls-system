@@ -1,7 +1,5 @@
 import app.DBController;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
+import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import mls.*;
@@ -11,12 +9,16 @@ import mls.property.Property;
 import mls.property.structure.Building;
 import mls.property.structure.Room;
 import mls.property.structure.exterior.Backyard;
+import mls.property.structure.exterior.Exterior;
 import mls.property.structure.exterior.Lawn;
 import mls.property.structure.exterior.Pool;
 import mls.property.structure.neighbourhoodfeatures.Hospital;
+import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeatures;
 import mls.property.structure.neighbourhoodfeatures.School;
+import org.springframework.hateoas.mediatype.alps.Ext;
 
 import java.io.*;
+import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.UUID;
@@ -30,7 +32,11 @@ public class GsonTestCreateRead {
         try (Writer writer = new FileWriter(filePath + "/src/test/java/sampleData.json")) {
 
 
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            Gson gson = new GsonBuilder()
+                    .setPrettyPrinting()
+                    .registerTypeAdapter(Exterior.class, new InterfaceAdapter<Exterior>())
+                    .registerTypeAdapter(NeighbourhoodFeatures.class, new InterfaceAdapter<NeighbourhoodFeatures>())
+                    .create();
 
             Farmhouse f = Farmhouse.builder()
                     .address(new Address(3495,
@@ -62,7 +68,6 @@ public class GsonTestCreateRead {
                             )
                             .build()
                     )
-                    .addNeighbourhoodFeature(new Hospital())
                     .addNeighbourhoodFeature(new School())
                     .lease(new LeaseInformation("Strata", 550.0))
                     .build();
@@ -89,12 +94,69 @@ public class GsonTestCreateRead {
         }
     }
 
+    public static class InterfaceAdapter<T>
+            implements JsonSerializer<T>, JsonDeserializer<T> {
+
+        @Override
+        public final JsonElement serialize(final T object, final Type interfaceType, final JsonSerializationContext context)
+        {
+            final JsonObject member = new JsonObject();
+
+            member.addProperty("type", object.getClass().getName());
+
+            member.add("data", context.serialize(object));
+
+            return member;
+        }
+
+        @Override
+        public final T deserialize(final JsonElement elem, final Type interfaceType, final JsonDeserializationContext context)
+                throws JsonParseException
+        {
+            final JsonObject member = (JsonObject) elem;
+            final JsonElement typeString = get(member, "type");
+            final JsonElement data = get(member, "data");
+            final Type actualType = typeForName(typeString);
+
+            return context.deserialize(data, actualType);
+        }
+
+        private Type typeForName(final JsonElement typeElem)
+        {
+            try
+            {
+                return Class.forName(typeElem.getAsString());
+            }
+            catch (ClassNotFoundException e)
+            {
+                throw new JsonParseException(e);
+            }
+        }
+
+        private JsonElement get(final JsonObject wrapper, final String memberName)
+        {
+            final JsonElement elem = wrapper.get(memberName);
+
+            if (elem == null)
+            {
+                throw new JsonParseException(
+                        "no '" + memberName + "' member found in json file.");
+            }
+            return elem;
+        }
+
+    }
+
     /**
      * finds listing by mls number
      * @param
      */
     public static void read() throws IOException {
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder()
+                .setPrettyPrinting()
+                .registerTypeAdapter(Exterior.class, new InterfaceAdapter<Exterior>())
+                .registerTypeAdapter(NeighbourhoodFeatures.class, new InterfaceAdapter<NeighbourhoodFeatures>())
+                .create();
         // get path of A3 folder on your local machine
         String filePath = new File("").getAbsolutePath();
         // make reader using what is effectively relative pathing
@@ -102,13 +164,14 @@ public class GsonTestCreateRead {
 
         Listing data = gson.fromJson(reader, Listing.class);
 
-        System.out.println(data.getProperty());
+        System.out.println(data.getProperty().toString());
 
 
     }
 
     public static void main(String[] args) throws IOException {
 
+        GsonTestCreateRead.create();
         GsonTestCreateRead.read();
 
 

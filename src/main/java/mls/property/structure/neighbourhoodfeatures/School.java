@@ -8,7 +8,10 @@ public class School implements NeighbourhoodFeatures {
     private String link;
     private String phoneNumber;
 
-    public School(){}
+    public School(){
+        this.link = "";
+        this.phoneNumber = "";
+    }
     public School(String link, String phoneNumber){
         this.link = link;
         this.phoneNumber = phoneNumber;
