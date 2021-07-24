@@ -16,7 +16,7 @@ public class Property {
     private Size landSize;
     private List<Exterior> exteriors = new ArrayList<>();
     private Building building;
-    private NeighbourhoodFeaturesContainer neighbourhood;
+    private NeighbourhoodFeaturesContainer neighbourhood = new NeighbourhoodFeaturesContainer();
     private LeaseInformation leaseInformation;
 
     public enum LeaseType { Freehold, Leasehold};
