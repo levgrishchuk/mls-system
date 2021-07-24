@@ -44,41 +44,31 @@ public class NeighbourhoodFeaturesContainer {
 
 
     public boolean equalss(NeighbourhoodFeaturesContainer other){
-//        // compare addresses
-//        if(this == other){
-//            return true;
-//        }
-//
-//        // temp copy
-//        List<NeighbourhoodFeatures> temp = new ArrayList<NeighbourhoodFeatures>(this.neighbourhoodFeaturesList);
-//        for(NeighbourhoodFeatures feature: other.getNeighbourhood()){
-//            // if no match, return not equal
-//            if(!(temp.remove(feature))){
-//                return false;
-//            }
-//        }
-//        // true if complete match
-//        return temp.isEmpty();
-
         List<NeighbourhoodFeatures> thisList = this.getNeighbourhood();
         List<NeighbourhoodFeatures> otherList = other.getNeighbourhood();
 
+        // if containers have the same addresses
+        if(this == other){
+            return true;
+        }
 
-//        // if containers have the same addresses
-//        if(this.neighbourhoodFeaturesList == other){
-//            return true;
-//        }
-//        // if lists have different lengths
-//        if(thisSorted.size() != otherSorted.size()){
-//            return false;
-//        }
+        // if lists have the same addresses
+        if(thisList == otherList){
+            return true;
+        }
 
+        // if lists have different lengths
+        if(thisList.size() != otherList.size()){
+            return false;
+        }
+
+        // iteratively check if all the objects have the same attributes
         // result accumulated in flag, check if each individual object has different attributes
         boolean totalflag = true;
         for(int i = 0; i < thisList.size(); i++){
             boolean rowflag = false;
-            for(int j = i; j < otherList.size(); j++){
-                rowflag = rowflag || thisList.equals(otherList);
+            for(int j = 0; j < otherList.size(); j++){
+                rowflag = rowflag || thisList.get(i).equals(otherList.get(j));
             }
             totalflag = totalflag && rowflag;
         }

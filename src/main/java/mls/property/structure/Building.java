@@ -170,7 +170,13 @@ public class Building {
         this.appliances.add(appliance);
     }
 
-    public boolean equals(Building other){
+    @Override
+    public boolean equals(Object other){
+        // if not building object, automatically not equals
+        if(other.getClass() != Building.class){
+            return false;
+        }
+
         // compare addresses
         if(this == other){
             return true;
@@ -181,31 +187,40 @@ public class Building {
 
         // compare simple attributes
         flag = flag &&
-                (this.getCategory() == other.getCategory()) &&
-                (this.getStoryCount() == other.getUnitCount()) &&
-                (this.getStoryCount() == other.getStoryCount()) &&
-                (this.HasBasement() == other.HasBasement()) &&
-                (this.getExteriorDesign() == other.getExteriorDesign()) &&
-                (this.getAppliances().equals(other.getAppliances()));
+                (this.getCategory() == ((Building) other).getCategory()) &&
+                (this.getStoryCount() == ((Building) other).getUnitCount()) &&
+                (this.getStoryCount() == ((Building) other).getStoryCount()) &&
+                (this.HasBasement() == ((Building) other).HasBasement()) &&
+                (this.getExteriorDesign() == ((Building) other).getExteriorDesign()) &&
+                (this.getAppliances().equals(((Building) other).getAppliances()));
 
         // compare rooms lists
         // compare addresses
-        if(this.getRooms() == other.getRooms()){
+        if(this.getRooms() == ((Building) other).getRooms()){
             return flag && true;
         }
-        return false;
 
-//        // temp copy
-//        List<Room> temp = new ArrayList<Room>(this.getRooms());
-//        for(Room room: other.getRooms()){
-//            // if no match, return not equal
-//            if(!(temp.remove(room))){
-//                return false;
-//            }
-//        }
-//
-//        // true if complete match
-//        return flag && temp.isEmpty();
+        // compare attributes of all objects inside
+        List<Room> thisList = this.getRooms();
+        List<Room> otherList = ((Building) other).getRooms();
+
+        // if lists have different lengths
+        if(thisList.size() != otherList.size()){
+            return false;
+        }
+
+        // iteratively check if all the objects have the same attributes
+        // result accumulated in flag, check if each individual object has different attributes
+        boolean roomFlag = true;
+        for(int i = 0; i < thisList.size(); i++){
+            boolean rowFlag = false;
+            for(int j = 0; j < otherList.size(); j++){
+                rowFlag = rowFlag || thisList.get(i).equals(otherList.get(j));
+            }
+            roomFlag = roomFlag && rowFlag;
+        }
+        return flag && roomFlag;
+
     }
 
     public static class Builder {

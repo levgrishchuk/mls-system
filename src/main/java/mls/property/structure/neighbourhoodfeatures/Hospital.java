@@ -1,5 +1,7 @@
 package mls.property.structure.neighbourhoodfeatures;
 
+import mls.property.structure.Room;
+
 /**
  * Implementation of interface, implements link features.
  * Also has separate phone number feature.
@@ -45,6 +47,9 @@ public class Hospital implements NeighbourhoodFeatures {
 
     @Override
     public boolean equals(Object other){
+        if(other.getClass() != Hospital.class){
+            return false;
+        }
         return (this.getLink().equals(((Hospital) other).getLink()) &&
                 this.getPhoneNumber().equals(((Hospital) other).getPhoneNumber()));
     }

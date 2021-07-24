@@ -65,11 +65,9 @@ public class test {
         Building b3 = new Building(b2);
         b3.setStoryCount(99);
 
-//        System.out.println(b1.equals(b1));
-//        System.out.println(b1.equals(b2));
-//        System.out.println(b1.equals(b3));
-
+        assert b1.equals(b1);
         assert b1.equals(b2);
+        assert !b1.equals(b3);
 
     }
     @Test
@@ -82,6 +80,7 @@ public class test {
         NeighbourhoodFeaturesContainer c1 = new NeighbourhoodFeaturesContainer();
         NeighbourhoodFeaturesContainer c2 = new NeighbourhoodFeaturesContainer();
         NeighbourhoodFeaturesContainer c3 = new NeighbourhoodFeaturesContainer();
+        NeighbourhoodFeaturesContainer c4 = new NeighbourhoodFeaturesContainer();
 
         c1.add(f1);
         c1.add(f2);
@@ -98,9 +97,15 @@ public class test {
         c3.add(f2);
         c3.add(f1);
 
-        System.out.println(c1.equalss(c1));
-        System.out.println(c1.equalss(c2));
-        System.out.println(c1.equalss(c3));
+        c4.add(f4);
+        c4.add(f3);
+        c4.add(f2);
+
+        assert c1.equalss(c1);
+        assert c1.equalss(c2);
+        assert c1.equalss(c3);
+        assert !c1.equalss(c4);
+
 
     }
 }

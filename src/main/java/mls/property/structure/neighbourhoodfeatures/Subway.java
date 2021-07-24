@@ -22,4 +22,12 @@ public class Subway implements NeighbourhoodFeatures{
     public NeighbourhoodFeatures makeCopy(){
         return new Subway(this);
     }
+
+    @Override
+    public boolean equals(Object other){
+        if(other.getClass() != Subway.class){
+            return false;
+        }
+        return (this.getLink().equals(((Subway) other).getLink()));
+    }
 }
