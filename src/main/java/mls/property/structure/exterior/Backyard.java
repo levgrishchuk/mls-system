@@ -1,12 +1,18 @@
 package mls.property.structure.exterior;
 
+import mls.Size;
+
 public class Backyard extends Exterior {
-    public Backyard(Builder builder) {
-        super(builder);
+    public Backyard(){}
+    public Backyard(Size size) {
+        super(size);
     }
-    public static class Builder extends Exterior.Builder<Builder>{
-        public Backyard build(){
-            return new Backyard(this);
-        }
+
+    /**
+     * copy constructor
+     * @param other
+     */
+    public Backyard(Backyard other){
+        super(other);
     }
 }

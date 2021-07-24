@@ -1,4 +1,6 @@
 package mls.property.structure;
+import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeatures;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,18 +40,18 @@ public class Building {
         this.storyCount = building.getStoryCount();
 
         // list deep copy
-        this.rooms = new ArrayList();
-        for(Object room : building.getRooms()){
-            this.rooms.add(new Room((Room) room));
+        this.rooms = new ArrayList<>();
+        for(Room room : building.getRooms()){
+            this.rooms.add(new Room(room));
         }
 
         this.exteriorDesign = building.getExteriorDesign();
         this.hasBasement = building.HasBasement();
 
         // list deep copy
-        this.appliances = new ArrayList();
-        for(Object appliance : building.getAppliances()){
-            this.appliances.add((String) appliance);
+        this.appliances = new ArrayList<>();
+        for(String appliance : building.getAppliances()){
+            this.appliances.add(appliance);
         }
     }
 
@@ -68,18 +70,18 @@ public class Building {
         this.storyCount = builder.storyCount;
 
         // list deep copy
-        this.rooms = new ArrayList();
-        for(Object room : builder.rooms){
-            this.rooms.add(new Room((Room) room));
+        this.rooms = new ArrayList<>();
+        for(Room room : builder.rooms){
+            this.rooms.add(new Room(room));
         }
 
         this.exteriorDesign = builder.exteriorDesign;
         this.hasBasement = builder.hasBasement;
 
         // list deep copy
-        this.appliances = new ArrayList();
-        for(Object appliance : builder.appliances){
-            this.appliances.add((String) appliance);
+        this.appliances = new ArrayList<>();
+        for(String appliance : builder.appliances){
+            this.appliances.add(appliance);
         }
     }
 
@@ -97,9 +99,9 @@ public class Building {
 
     public List<Room> getRooms() {
         // list deep copy
-        List<Room> result = new ArrayList();
-        for(Object room : this.rooms){
-            result.add(new Room((Room) room));
+        List<Room> result = new ArrayList<>();
+        for(Room room : this.rooms){
+            result.add(new Room(room));
         }
         return result;
     }
@@ -114,9 +116,9 @@ public class Building {
 
     public List<String> getAppliances() {
         // list deep copy
-        List<String> result = new ArrayList();
-        for(Object appliance : this.appliances){
-            result.add((String) appliance);
+        List<String> result = new ArrayList<>();
+        for(String appliance : this.appliances){
+            result.add(appliance);
         }
         return result;
     }
@@ -135,9 +137,9 @@ public class Building {
 
     public void setRooms(List<Room> rooms) {
         // list deep copy
-        this.rooms = new ArrayList();
-        for(Object room : rooms){
-            this.rooms.add(new Room((Room) room));
+        this.rooms = new ArrayList<>();
+        for(Room room : rooms){
+            this.rooms.add(new Room(room));
         }
     }
 
@@ -156,10 +158,10 @@ public class Building {
 
     public void setAppliances(List<String> appliances) {
         // list deep copy
-        this.appliances = new ArrayList();
-        for(Object appliance : appliances){
+        this.appliances = new ArrayList<>();
+        for(String appliance : appliances){
             // String immutable, no need for new object
-            this.appliances.add((String) appliance);
+            this.appliances.add(appliance);
         }
     }
 
@@ -168,16 +170,51 @@ public class Building {
         this.appliances.add(appliance);
     }
 
-    public static class Builder<T extends Builder<T>>{
-        private BuildingCategory category;
+    public boolean equals(Building other){
+        // compare addresses
+        if(this == other){
+            return true;
+        }
+
+        // results accumulated here
+        boolean flag = true;
+
+        // compare simple attributes
+        flag = flag &&
+                (this.getCategory() == other.getCategory()) &&
+                (this.getStoryCount() == other.getUnitCount()) &&
+                (this.getStoryCount() == other.getStoryCount()) &&
+                (this.HasBasement() == other.HasBasement()) &&
+                (this.getExteriorDesign() == other.getExteriorDesign()) &&
+                (this.getAppliances().equals(other.getAppliances()));
+
+        // compare rooms lists
+        // compare addresses
+        if(this.getRooms() == other.getRooms()){
+            return flag && true;
+        }
+
+        // temp copy
+        List<Room> temp = new ArrayList<Room>(this.getRooms());
+        for(Room room: other.getRooms()){
+            // if no match, return not equal
+            if(!(temp.remove(room))){
+                return false;
+            }
+        }
+
+        // true if complete match
+        return flag && temp.isEmpty();
+    }
+
+    public static class Builder {
+        private BuildingCategory category = BuildingCategory.Other;
         private int unitCount;
         private int storyCount;
-        private List<Room> rooms;
+        private List<Room> rooms = new ArrayList<>();
         private String exteriorDesign;
         private boolean hasBasement;
-        private List<String> appliances;
-
-        private Builder(){} // private constructor
+        private List<String> appliances = new ArrayList<>();
 
         public Builder setCategory(BuildingCategory category) {
             this.category = category;
@@ -196,9 +233,9 @@ public class Building {
 
         public Builder setRooms(List<Room> rooms) {
             // list deep copy
-            this.rooms = new ArrayList();
-            for(Object room : rooms){
-                this.rooms.add(new Room((Room) room));
+            this.rooms = new ArrayList<>();
+            for(Room room : rooms){
+                this.rooms.add(new Room(room));
             }
             return this;
         }
@@ -210,16 +247,9 @@ public class Building {
         }
 
         public Builder setExteriorDesign(String exteriorDesign) {
-            // list deep copy
-            this.appliances = new ArrayList();
-            for(Object appliance : appliances){
-                // String immutable, no need for new object
-                this.appliances.add((String) appliance);
-            }
+            this.exteriorDesign = exteriorDesign;
             return this;
         }
-
-
 
         public Builder setHasBasement(boolean hasBasement) {
             this.hasBasement = hasBasement;

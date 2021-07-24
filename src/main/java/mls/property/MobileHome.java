@@ -82,7 +82,7 @@ public class MobileHome extends Property {
         }
 
         @Override
-        public Builder addNeighbourhood(NeighbourhoodFeatures neighbourhoodFeatures) {
+        public Builder addNeighbourhoodFeature(NeighbourhoodFeatures neighbourhoodFeatures) {
             throw new UnsupportedOperationException("Mobile homes don't have fixed neighbourhood.");
         }
 

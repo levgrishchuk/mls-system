@@ -1,24 +1,30 @@
 package mls.property.structure.neighbourhoodfeatures;
 import mls.property.structure.Room;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * Stores list of neighbourhood features
  */
 public class NeighbourhoodFeaturesContainer {
-    private List<NeighbourhoodFeatures> neighbourhoodFeaturesList;
+    private List<NeighbourhoodFeatures> neighbourhoodFeaturesList = new ArrayList();
 
-    public NeighbourhoodFeaturesContainer(Builder builder){
-        this.neighbourhoodFeaturesList = builder.neighbourhoodFeaturesList;
+    public NeighbourhoodFeaturesContainer(){
+        this.neighbourhoodFeaturesList = new ArrayList<>();
     }
 
     public NeighbourhoodFeaturesContainer(List<NeighbourhoodFeatures> list){
         // list deep copy
-        this.neighbourhoodFeaturesList = new ArrayList();
+        this.neighbourhoodFeaturesList = new ArrayList<>();
         for(int i = 0 ; i < list.size(); i++){
             this.neighbourhoodFeaturesList.add(list.get(i).makeCopy());
         }
+    }
+
+    public List<NeighbourhoodFeatures> getNeighbourhood(){
+        return this.neighbourhoodFeaturesList;
     }
 
     public void add(NeighbourhoodFeatures feature){
@@ -38,28 +44,21 @@ public class NeighbourhoodFeaturesContainer {
         }
     }
 
-    /**
-     * builder class
-     * @param <T>
-     */
-    public static class Builder<T extends Builder<T>>{
-        private List<NeighbourhoodFeatures> neighbourhoodFeaturesList;
+    public boolean equals(NeighbourhoodFeaturesContainer other){
+        // compare addresses
+        if(this == other){
+            return true;
+        }
 
-        /**
-         * loops through list and adds copy of each feature
-         * @param list
-         */
-        public void setNeighbourhoodFeaturesList(List<NeighbourhoodFeatures> list){
-            // list deep copy
-            this.neighbourhoodFeaturesList = new ArrayList();
-            for(int i = 0 ; i < list.size(); i++){
-                this.neighbourhoodFeaturesList.add(list.get(i).makeCopy());
+        // temp copy
+        List<NeighbourhoodFeatures> temp = new ArrayList<NeighbourhoodFeatures>(this.neighbourhoodFeaturesList);
+        for(NeighbourhoodFeatures feature: other.getNeighbourhood()){
+            // if no match, return not equal
+            if(!(temp.remove(feature))){
+                return false;
             }
         }
-
-        public void addNeighbourhoodFeature(NeighbourhoodFeatures feature){
-            this.neighbourhoodFeaturesList.add(feature.makeCopy());
-        }
+        // true if complete match
+        return temp.isEmpty();
     }
-
 }

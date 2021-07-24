@@ -1,15 +1,19 @@
 package mls.property.structure.exterior;
 
+import mls.Size;
 import mls.property.structure.exterior.Exterior;
 
 public class Pool extends Exterior {
-    public Pool(Builder builder) {
-        super(builder);
+    public Pool(){};
+    public Pool(Size size) {
+        super(size);
     }
 
-    public static class Builder extends Exterior.Builder<Backyard.Builder>{
-        public Pool build(){
-            return new Pool(this);
-        }
+    /**
+     * copy constructor
+     * @param other
+     */
+    public Pool(Pool other){
+        super(other);
     }
 }

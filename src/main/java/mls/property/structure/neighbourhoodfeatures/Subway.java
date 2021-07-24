@@ -7,6 +7,10 @@ public class Subway implements NeighbourhoodFeatures{
         this.link = other.link;
     }
 
+    public Subway(){}
+    public Subway(String link){
+        this.link = link;
+    }
     public void setLink(String link){
         this.link = link;
     }

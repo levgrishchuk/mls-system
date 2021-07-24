@@ -176,7 +176,7 @@ public class Property {
         private Size landSize;
         private List<Exterior> exteriors = new ArrayList<>();
         private Building building;
-        private NeighbourhoodFeaturesContainer neighbourhood = new NeighbourhoodFeaturesContainer();;
+        private NeighbourhoodFeaturesContainer neighbourhood = new NeighbourhoodFeaturesContainer();
         private LeaseInformation leaseInformation;
 
         public T address(Address address) {
@@ -209,12 +209,12 @@ public class Property {
             return (T) this;
         }
 
-        public T neighbourhoodFeature(List<NeighbourhoodFeatures> list){
+        public T neighbourhoodFeaturesList(List<NeighbourhoodFeatures> list){
             this.neighbourhood = new NeighbourhoodFeaturesContainer(list);
             return (T) this;
         }
 
-        public T addNeighbourhood(NeighbourhoodFeatures neighbourhoodFeatures) {
+        public T addNeighbourhoodFeature(NeighbourhoodFeatures neighbourhoodFeatures) {
             this.neighbourhood.add(neighbourhoodFeatures);
             return (T) this;
         }

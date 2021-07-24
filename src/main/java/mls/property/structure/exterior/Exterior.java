@@ -4,13 +4,21 @@ import mls.Size;
 
 public abstract class Exterior {
     private Size size;
-    private Type type;
-    public enum Type {
-        Backyard, Deck, Lawn, Parking, Pool, Other
+
+    public Exterior(){
+        this.size = null;
     }
 
-    public Exterior(Builder builder){
-        this.size = builder.size;
+    /**
+     * copy constructor
+     * @param exterior
+     */
+    public Exterior(Exterior exterior){
+        this.size = exterior.size;
+    }
+
+    public Exterior(Size size){
+        this.size = size;
     }
 
     public Size getSize() {
@@ -21,16 +29,12 @@ public abstract class Exterior {
         this.size = size;
     }
 
-    public void setType(Type type) {
-        this.type = type;
-    }
+//    public boolean equals(Exterior other){
+//        if(this == other){
+//            return true;
+//        }
+//
+//        if()
+//    }
 
-    public static class Builder<T extends Builder<T>>{
-        private Size size;
-
-        public Builder setSize(Size size) {
-            this.size = size;
-            return this;
-        }
-    }
 }

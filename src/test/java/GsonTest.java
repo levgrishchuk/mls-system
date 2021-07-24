@@ -69,7 +69,7 @@ public class GsonTest {
                         .setStoryCount(1)
                         .setHasBasement(false)
                         .build())
-                .addNeighbourhood(new Hospital())
+                /*.addNeighbourhood(new Hospital())*/
                 /*.addNeighbourhood(Property.NeighbourhoodFeatures.School)*/
                 .lease(new LeaseInformation("Strata", 550.0))
                 .build();

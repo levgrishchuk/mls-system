@@ -1,40 +1,46 @@
 package mls.property.structure.exterior;
 
+import mls.Size;
 import mls.property.structure.exterior.Exterior;
 
 public class Parking extends Exterior {
     private String type;
     private int carSpace;
 
-    public Parking(Builder builder) {
-        super(builder);
+    /**
+     * default constructor
+     */
+    public Parking(){}
+
+    public Parking(Size size, String type, int carSpace) {
+        super(size);
         this.type = type;
         this.carSpace = carSpace;
     }
-    public static class Builder extends Exterior.Builder<Backyard.Builder>{
-        private String type;
-        private int carSpace;
 
-        public Builder setType(String type){
-            this.type = type;
-            return this;
-        }
+    /**
+     * copy constructor
+     * @param other
+     */
+    public Parking(Parking other){
+        super(other);
+        this.type = other.getType();
+        this.carSpace = other.carSpace;
+    }
 
-        public Builder setCarSpace(int carSpace){
-            this.carSpace = carSpace;
-            return this;
-        }
+    public String getType() {
+        return type;
+    }
 
-        /**
-         * Build method
-         * @return Parking instance
-         * @throws RuntimeException
-         */
-        public Parking build(){
-            if(this.carSpace <= 0){
-                throw new RuntimeException("Car space must be positive");
-            }
-            return new Parking(this);
-        }
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getCarSpace() {
+        return carSpace;
+    }
+
+    public void setCarSpace(int carSpace) {
+        this.carSpace = carSpace;
     }
 }
