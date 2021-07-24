@@ -1,5 +1,7 @@
 package mls.property;
 
+import org.glassfish.jersey.server.model.Suspendable;
+
 public class DetachedHome extends FamilyHome {
     private boolean isSemiDetached;
 
@@ -28,6 +30,19 @@ public class DetachedHome extends FamilyHome {
 
     public void setSemiDetached(boolean semiDetached) {
         isSemiDetached = semiDetached;
+    }
+
+    /**
+     * Returns true if obj is identical to this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !obj.getClass().equals(this.getClass()))
+            return false;
+
+        DetachedHome p = (DetachedHome) obj;
+        return super.equals(p) &&
+                this.isSemiDetached == p.isSemiDetached();
     }
 
     /**

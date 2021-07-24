@@ -54,6 +54,21 @@ public class StackedTownhouse extends FamilyHome {
     }
 
     /**
+     * Returns true if obj is identical to this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !obj.getClass().equals(this.getClass()))
+            return false;
+
+        StackedTownhouse p = (StackedTownhouse) obj;
+
+        return super.equals(p) &&
+                Integer.compare(this.stackCount, p.getStackCount()) == 0 &&
+                this.getUnitTownhouse().equals(p.getUnitTownhouse());
+    }
+
+    /**
      * Returns an instance of Builder.
      */
     public static Builder builder() {

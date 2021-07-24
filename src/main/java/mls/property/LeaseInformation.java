@@ -69,4 +69,18 @@ public class LeaseInformation {
                 ", monthlyFee=" + monthlyFee +
                 '}';
     }
+
+    /**
+     * Returns if obj is identical to this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !obj.getClass().equals(this.getClass()))
+            return false;
+
+        LeaseInformation l = (LeaseInformation) obj;
+
+        return this.landlord.equals(l.getLandlord()) &&
+                Double.compare(this.monthlyFee, l.getMonthlyFee()) == 0;
+    }
 }

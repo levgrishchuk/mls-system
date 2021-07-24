@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Property {
     private Address address;
-    private Double annualTax;
+    private Double annualTax = 0.0;
     private boolean isUnderConstruction = false;
     private Size landSize;
     private List<Exterior> exteriors = new ArrayList<>();
@@ -20,8 +20,6 @@ public class Property {
     private LeaseInformation leaseInformation;
 
     public enum LeaseType { Freehold, Leasehold};
-
-
 
     private Property() {};
 
@@ -39,7 +37,7 @@ public class Property {
         this.setNeighbourhood(property.getNeighbourhood());
 
         if (property.leaseInformation != null)
-            makeLeasehold(property.leaseInformation);
+            setLeasehold(property.leaseInformation);
     }
 
     /**
@@ -121,6 +119,10 @@ public class Property {
         this.neighbourhood.setNeighbourhood(neighbourhood);
     }
 
+    public LeaseInformation getLeaseInformation() {
+        return new LeaseInformation(this.leaseInformation);
+    }
+
     public void addNeighbourhoodFeature(NeighbourhoodFeatures neighbourhoodFeatures) {
         this.neighbourhood.add(neighbourhoodFeatures);
     }
@@ -129,14 +131,14 @@ public class Property {
      * Sets property lease type to leasehold.
      * @param leaseInformation Lease information.
      */
-    public void makeLeasehold(LeaseInformation leaseInformation) {
+    public void setLeasehold(LeaseInformation leaseInformation) {
         this.leaseInformation = new LeaseInformation(leaseInformation);
     }
 
     /**
      * Sets property lease type to freehold.
      */
-    public void makeFreehold() {
+    public void setFreehold() {
         this.leaseInformation = null;
     }
 
@@ -171,6 +173,73 @@ public class Property {
                 ", neighbourhood=" + neighbourhood +
                 ", leaseInformation=" + leaseInformation +
                 '}';
+    }
+
+    /**
+     * Returns true if obj is identical to this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof Property))
+            return false;
+
+        Property p = (Property) obj;
+
+        boolean addrEq = true;
+        boolean sizeEq = true;
+        boolean builEq = true;
+        boolean neigEq = true;
+        boolean leasEq = true;
+
+        // check leaseinfo
+        if(this.leaseInformation == null) {
+            if (p.leaseInformation != null)
+                return false;
+        }
+        else
+            leasEq = this.leaseInformation.equals(p.getLeaseInformation());
+
+        // check neighborhood
+        if(this.neighbourhood == null) {
+            if (p.neighbourhood != null)
+                return false;
+        }
+        else
+            neigEq = this.neighbourhood.equals(p.getNeighbourhood());
+
+        // check building
+        if(this.building == null) {
+            if (p.building != null)
+                return false;
+        }
+        else
+            builEq = this.building.equals(p.getBuilding());
+
+        // check size
+        if(this.landSize == null) {
+            if (p.landSize != null)
+                return false;
+        }
+        else
+            sizeEq = this.landSize.equals(p.getLandSize());
+
+        // check address
+        if(this.address == null) {
+            if (p.address != null)
+                return false;
+        }
+        else
+            addrEq = this.address.equals(p.getAddress());
+
+        // check others
+        return Double.compare(this.annualTax, p.getAnnualTax()) == 0 &&
+                this.isUnderConstruction == p.isUnderConstruction() &&
+                this.exteriors.equals(p.getExteriors()) &&
+                addrEq &&
+                sizeEq &&
+                neigEq &&
+                builEq &&
+                leasEq;
     }
 
     /**

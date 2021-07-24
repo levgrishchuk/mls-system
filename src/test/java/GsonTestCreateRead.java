@@ -134,7 +134,7 @@ public class GsonTestCreateRead {
      * @param
      * @throws IOException
 //     */
-    public static void read(int test) throws IOException {
+    public static void read(int test1) throws IOException {
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .registerTypeAdapter(Exterior.class, new typeAdapter<Exterior>())

@@ -45,6 +45,20 @@ public class Recreational extends Property{
     }
 
     /**
+     * Returns true if obj is identical to this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !obj.getClass().equals(this.getClass()))
+            return false;
+
+        Recreational p = (Recreational) obj;
+
+        return super.equals(p) &&
+                this.type == p.getType();
+    }
+
+    /**
      * Returns an instance of Builder.
      */
     public static Builder builder() {

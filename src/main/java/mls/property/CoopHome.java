@@ -16,6 +16,19 @@ public class CoopHome extends FamilyHome{
     }
 
     /**
+     * Returns true if obj is identical to this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !obj.getClass().equals(this.getClass()))
+            return false;
+
+        CoopHome p = (CoopHome) obj;
+
+        return super.equals(p);
+    }
+
+    /**
      * Returns an instance of Builder.
      */
     public static Builder builder() {
