@@ -51,6 +51,21 @@ public class Farmhouse extends Property{
     }
 
     /**
+     * Returns true if obj is identical to this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !obj.getClass().equals(this.getClass()))
+            return false;
+
+        Farmhouse p = (Farmhouse) obj;
+
+        return super.equals(p) &&
+                this.courtyard == p.hasCourtyard() &&
+                this.barn == p.hasBarn();
+    }
+
+    /**
      * Returns an instance of Builder.
      */
     public static Builder builder() {

@@ -31,6 +31,20 @@ public class DetachedHome extends FamilyHome {
     }
 
     /**
+     * Returns true if obj is identical to this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !obj.getClass().equals(this.getClass()))
+            return false;
+
+        DetachedHome p = (DetachedHome) obj;
+
+        return super.equals(p) &&
+                this.isSemiDetached == p.isSemiDetached();
+    }
+
+    /**
      * Returns an instance of Builder.
      */
     public static Builder builder() {
