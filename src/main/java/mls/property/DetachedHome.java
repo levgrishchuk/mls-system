@@ -1,5 +1,7 @@
 package mls.property;
 
+import org.glassfish.jersey.server.model.Suspendable;
+
 public class DetachedHome extends FamilyHome {
     private boolean isSemiDetached;
 
@@ -39,7 +41,6 @@ public class DetachedHome extends FamilyHome {
             return false;
 
         DetachedHome p = (DetachedHome) obj;
-
         return super.equals(p) &&
                 this.isSemiDetached == p.isSemiDetached();
     }

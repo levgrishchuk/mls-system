@@ -108,10 +108,10 @@ public class test {
         c4.add(f3);
         c4.add(f2);
 
-        assert c1.equalss(c1);
-        assert c1.equalss(c2);
-        assert c1.equalss(c3);
-        assert !c1.equalss(c4);
+        assert c1.equals(c1);
+        assert c1.equals(c2);
+        assert c1.equals(c3);
+        assert !c1.equals(c4);
 
 
     }

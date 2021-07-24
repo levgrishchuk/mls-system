@@ -3,9 +3,11 @@ import mls.property.*;
 import mls.property.structure.Building;
 import mls.*;
 import mls.property.structure.Room;
+import mls.property.structure.neighbourhoodfeatures.Hospital;
 
 public class SampleTest {
     public static void main(String[] args) {
+
         DetachedHome f1 = DetachedHome.builder()
                 /*.address(new Address(3495,
                         "Lawrence Ave.",

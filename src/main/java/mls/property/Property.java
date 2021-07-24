@@ -122,7 +122,7 @@ public class Property {
     public LeaseInformation getLeaseInformation() {
         return new LeaseInformation(this.leaseInformation);
     }
-    
+
     public void addNeighbourhoodFeature(NeighbourhoodFeatures neighbourhoodFeatures) {
         this.neighbourhood.add(neighbourhoodFeatures);
     }

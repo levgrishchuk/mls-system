@@ -1,4 +1,5 @@
 package mls.property.structure.neighbourhoodfeatures;
+import mls.property.DetachedHome;
 import mls.property.structure.Room;
 
 import java.util.*;
@@ -43,7 +44,7 @@ public class NeighbourhoodFeaturesContainer {
     }
 
 
-    public boolean equalss(NeighbourhoodFeaturesContainer other){
+/*    public boolean equals(NeighbourhoodFeaturesContainer other){
         List<NeighbourhoodFeatures> thisList = this.getNeighbourhood();
         List<NeighbourhoodFeatures> otherList = other.getNeighbourhood();
 
@@ -64,14 +65,26 @@ public class NeighbourhoodFeaturesContainer {
 
         // iteratively check if all the objects have the same attributes
         // result accumulated in flag, check if each individual object has different attributes
-        boolean totalflag = true;
-        for(int i = 0; i < thisList.size(); i++){
+        boolean totalflag = thisList.equals(otherList);
+        *//*for(int i = 0; i < thisList.size(); i++){
             boolean rowflag = false;
             for(int j = 0; j < otherList.size(); j++){
                 rowflag = rowflag || thisList.get(i).equals(otherList.get(j));
             }
             totalflag = totalflag && rowflag;
-        }
+        }*//*
         return totalflag;
+    }*/
+
+    /**
+     * Returns true if obj is identical to this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !obj.getClass().equals(this.getClass()))
+            return false;
+
+        NeighbourhoodFeaturesContainer p = (NeighbourhoodFeaturesContainer) obj;
+        return this.neighbourhoodFeaturesList.equals(p.neighbourhoodFeaturesList);
     }
 }
