@@ -1,0 +1,113 @@
+[
+  {
+    "mlsNumber": "3cf83ad0-1717-4044-a95b-1f60ca4a0e7c",
+    "listingPrice": 23.0,
+    "dateAdded": "Jul 24, 2021, 2:30:00 PM",
+    "dateSold": "Jul 24, 2021, 2:30:00 PM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  }
+]

@@ -1,72 +1,20 @@
-import app.DBController;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.stream.JsonReader;
 import mls.*;
-import mls.property.Farmhouse;
-import mls.property.LeaseInformation;
-import mls.property.structure.Building;
-import mls.property.structure.Room;
+import mls.property.*;
+import mls.property.structure.*;
+import mls.property.structure.exterior.*;
 import mls.property.structure.neighbourhoodfeatures.Hospital;
+import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeaturesContainer;
 import org.junit.Test;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 import static org.junit.Assert.assertEquals;
 
-public class DBControllerUnitTest {
-    DBController db = DBController.getInstance();
-
+public class ListingUnitTest {
     @Test
-    public void TestSingleton() {
-
-    }
-
-    @Test
-    public void TestUpdateNew() throws IOException {
-        Listing listing = getSample();
-        boolean found = false;
-        db.update(listing);
-        List<Listing> arr = db.readAll();
-
-        for (Listing l: arr) {
-            if (l.getMlsNumber().equals(listing.getMlsNumber()))
-                found = true;
-        }
-
-        assertEquals(true, found);
-    }
-
-    @Test
-    public void TestUpdateReplace() throws IOException {
-        db.clear();
-
-        Listing listing = getSample();
-        db.update(listing);
-        listing.setListingPrice(23f);
-        db.update(listing);
-
-        assertEquals(1, db.readAll().size());
-    }
-
-    @Test
-    public void TestRead() throws IOException {
-        Listing listing = getSample();
-        db.update(listing);
-        Listing readListing = db.read(listing.getMlsNumber());
-        assertEquals(true, listing.equals(readListing));
-
-        readListing = db.read(UUID.randomUUID());
-        assertEquals(null, readListing);
-    }
-
-    /** Returns a sample Listing object */
-    public Listing getSample() {
+    public void TestBuilder() {
         Address address = new Address(3495,
                 "Lawrence Ave.",
                 "Toronto",
@@ -114,6 +62,39 @@ public class DBControllerUnitTest {
                 .setSold(buyer, soldDate)
                 .build();
 
-        return l;
+        assertEquals(120000f, l.getListingPrice(), 0.00000001);
+        assertEquals(addedDate, l.getDateAdded());
+        assertEquals(farmhouse, l.getProperty());
+        assertEquals("Nice farmhouse.", l.getDescription());
+        assertEquals(owner, l.getPropertyOwner());
+        assertEquals(broker, l.getBroker());
+        assertEquals(soldDate, l.getDateSold());
+        assertEquals(buyer, l.getBuyer());
+        assertEquals(Listing.Status.Sold, l.getStatus());
+    }
+
+    @Test
+    public void TestStatus() {
+        Address address = new Address(3495,
+                "Lawrence Ave.",
+                "Toronto",
+                "Ontario",
+                "M1H 1B3");
+        Participant buyer = new Participant("Tim", address, "tim@gmail.com", "124-456-7890");
+        Listing l = Listing.builder()
+                .setListingPrice(120000f).build();
+
+        assertEquals(Listing.Status.Active, l.getStatus());
+
+        l.setSold(buyer, new Date());
+        assertEquals(Listing.Status.Sold, l.getStatus());
+    }
+
+    @Test
+    public void TestMlsGeneration() {
+        Listing l = Listing.builder()
+                .setListingPrice(120000f).build();
+        Object o = l.getMlsNumber();
+        assertEquals(true, o != null && o instanceof UUID);
     }
 }

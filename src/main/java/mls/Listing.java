@@ -36,7 +36,7 @@ public class Listing {
      * Builder constructor, see Builder class below
      */
     public Listing(Listing.Builder builder) {
-        this.mlsNumber = builder.mlsNumber;
+        this.mlsNumber = UUID.randomUUID();
         this.listingPrice = builder.listingPrice;
         this.dateAdded = builder.dateAdded;
         this.dateSold = builder.dateSold;
@@ -107,10 +107,6 @@ public class Listing {
         return status;
     }
 
-    public void setMlsNumber(UUID mlsNumber) {
-        this.mlsNumber = mlsNumber;
-    }
-
     public void setListingPrice(float listingPrice) {
         this.listingPrice = listingPrice;
     }
@@ -148,12 +144,41 @@ public class Listing {
     }
 
     /**
+     * Sets buyer and dateSold at the same time. Also, changes status to Sold.
+     * @param buyer
+     * @param dateSold
+     */
+    public void setSold(Participant buyer, Date dateSold) {
+        this.buyer = new Participant(buyer);
+        this.dateSold = dateSold;
+        this.status = Status.Sold;
+    }
+
+    /**
+     * Returns if the obj has same mlsNumber as this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !obj.getClass().equals(this.getClass()))
+            return false;
+
+        Listing l = (Listing) obj;
+        return this.mlsNumber.equals(l.getMlsNumber());
+    }
+
+    /**
+     * Returns an instance of builder.
+     */
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    /**
      * Nested static Builder class (Builder design)
      * Each setter method returns the Builder instance
      * The Build() method calls a Listing constructor with it's fields
      */
-    public static class Builder<T extends Property.Builder<T>> {
-        private UUID mlsNumber;
+    public static class Builder {
         private float listingPrice;
         private Date dateAdded;
         private Date dateSold;
@@ -162,17 +187,7 @@ public class Listing {
         private Participant propertyOwner;
         private Broker broker;
         private Participant buyer;
-        private Status status = Status.Unknown;
-
-        /**
-         * An example of a setter method
-         * @param mlsNumber A UUID
-         * @return Current Builder instance
-         */
-        public Builder setMlsNumber(UUID mlsNumber) {
-            this.mlsNumber = mlsNumber;
-            return this;
-        }
+        private Status status = Status.Active;
 
         public Builder setListingPrice(float listingPrice) {
             this.listingPrice = listingPrice;
@@ -216,6 +231,18 @@ public class Listing {
 
         public Builder setStatus(Status status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * Sets buyer and dateSold at the same time. Also, changes status to Sold.
+         * @param buyer
+         * @param dateSold
+         */
+        public Builder setSold(Participant buyer, Date dateSold) {
+            this.buyer = new Participant(buyer);
+            this.dateSold = dateSold;
+            this.status = Status.Sold;
             return this;
         }
 

@@ -12,10 +12,11 @@ import mls.property.structure.exterior.Lawn;
 import mls.property.structure.exterior.Pool;
 import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeatures;
 import mls.property.structure.neighbourhoodfeatures.School;
-
 import java.io.*;
 import java.lang.reflect.Type;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Date;
+
 
 public class GsonTestCreateRead {
 
@@ -28,9 +29,9 @@ public class GsonTestCreateRead {
 
             Gson gson = new GsonBuilder()
                     .setPrettyPrinting()
-                    .registerTypeAdapter(Exterior.class, new typeAdapter<Exterior>())
-                    .registerTypeAdapter(NeighbourhoodFeatures.class, new typeAdapter<NeighbourhoodFeatures>())
-                    .registerTypeAdapter(Property.class, new typeAdapter<Property>())
+                    .registerTypeAdapter(Exterior.class, new TypeAdapter<Exterior>())
+                    .registerTypeAdapter(NeighbourhoodFeatures.class, new TypeAdapter<NeighbourhoodFeatures>())
+                    .registerTypeAdapter(Property.class, new TypeAdapter<Property>())
                     .create();
 
             Property f = Farmhouse.builder()
@@ -68,7 +69,6 @@ public class GsonTestCreateRead {
                     .build();
 
             Listing l = new Listing.Builder()
-                    .setMlsNumber(UUID.randomUUID())
                     .setListingPrice(1000000.0F)
                     .setDateAdded(new Date())
                     .setProperty(f)
@@ -113,9 +113,9 @@ public class GsonTestCreateRead {
     public static void read() throws IOException {
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
-                .registerTypeAdapter(Exterior.class, new typeAdapter<Exterior>())
-                .registerTypeAdapter(NeighbourhoodFeatures.class, new typeAdapter<NeighbourhoodFeatures>())
-                .registerTypeAdapter(Property.class, new typeAdapter<Property>())
+                .registerTypeAdapter(Exterior.class, new TypeAdapter<Exterior>())
+                .registerTypeAdapter(NeighbourhoodFeatures.class, new TypeAdapter<NeighbourhoodFeatures>())
+                .registerTypeAdapter(Property.class, new TypeAdapter<Property>())
                 .create();
         // get path of A3 folder on your local machine
         String filePath = new File("").getAbsolutePath();
@@ -168,7 +168,7 @@ public class GsonTestCreateRead {
      * For serializing/deserializing abstract/interface/super classes
      * @param <T>
      */
-    public static class typeAdapter<T>
+    public static class TypeAdapter<T>
             implements JsonSerializer<T>, JsonDeserializer<T> {
 
         @Override
@@ -218,8 +218,5 @@ public class GsonTestCreateRead {
             }
             return elem;
         }
-
     }
-
-
 }

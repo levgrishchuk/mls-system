@@ -45,4 +45,17 @@ public class Brokerage {
     public void setAddress(Address address) {
         this.address = address;
     }
+
+    /**
+     * Returns true if obj is identical to this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof Brokerage))
+            return false;
+
+        Brokerage p = (Brokerage) obj;
+        return this.corporateName.equals(p.getCorporateName()) &&
+                this.address.equals(p.getAddress());
+    }
 }

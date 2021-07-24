@@ -10,6 +10,9 @@ import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * This UnitTest tests Farmhouse on behalf of every property subtypes.
+ */
 public class PropertyUnitTest {
     @Test
     public void TestPropertyBuilder() {
