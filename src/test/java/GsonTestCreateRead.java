@@ -34,7 +34,7 @@ public class GsonTestCreateRead {
                     .registerTypeAdapter(Property.class, new typeAdapter<Property>())
                     .create();
 
-            Farmhouse f = Farmhouse.builder()
+            Property f = Farmhouse.builder()
                     .address(new Address(3495,
                             "Lawrence Ave.",
                             "Toronto",
@@ -91,6 +91,36 @@ public class GsonTestCreateRead {
     }
 
     /**
+     * finds listing by mls number
+     * @param
+     */
+    public static void read() throws IOException {
+        Gson gson = new GsonBuilder()
+                .setPrettyPrinting()
+                .registerTypeAdapter(Exterior.class, new typeAdapter<Exterior>())
+                .registerTypeAdapter(NeighbourhoodFeatures.class, new typeAdapter<NeighbourhoodFeatures>())
+                .registerTypeAdapter(Property.class, new typeAdapter<Property>())
+                .create();
+        // get path of A3 folder on your local machine
+        String filePath = new File("").getAbsolutePath();
+        // make reader using what is effectively relative pathing
+        JsonReader reader = new JsonReader(new FileReader(filePath + "/src/test/java/sampleData.json"));
+
+        Listing data = gson.fromJson(reader, Listing.class);
+
+        System.out.println(data.getProperty().toString());
+
+
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        GsonTestCreateRead.create();
+        GsonTestCreateRead.read();
+
+    }
+
+    /**
      * For serializing/deserializing abstract/interface/super classes
      * @param <T>
      */
@@ -102,7 +132,7 @@ public class GsonTestCreateRead {
         {
             final JsonObject member = new JsonObject();
 
-            member.addProperty("type", object.getClass().getName());
+            member.addProperty("typeName", object.getClass().getName());
 
             member.add("data", context.serialize(object));
 
@@ -114,7 +144,7 @@ public class GsonTestCreateRead {
                 throws JsonParseException
         {
             final JsonObject member = (JsonObject) elem;
-            final JsonElement typeString = get(member, "type");
+            final JsonElement typeString = get(member, "typeName");
             final JsonElement data = get(member, "data");
             final Type actualType = typeForName(typeString);
 
@@ -147,35 +177,5 @@ public class GsonTestCreateRead {
 
     }
 
-    /**
-     * finds listing by mls number
-     * @param
-     */
-    public static void read() throws IOException {
-        Gson gson = new GsonBuilder()
-                .setPrettyPrinting()
-                .registerTypeAdapter(Exterior.class, new typeAdapter<Exterior>())
-                .registerTypeAdapter(NeighbourhoodFeatures.class, new typeAdapter<NeighbourhoodFeatures>())
-                .registerTypeAdapter(Property.class, new typeAdapter<Property>())
-                .create();
-        // get path of A3 folder on your local machine
-        String filePath = new File("").getAbsolutePath();
-        // make reader using what is effectively relative pathing
-        JsonReader reader = new JsonReader(new FileReader(filePath + "/src/test/java/sampleData.json"));
 
-        Listing data = gson.fromJson(reader, Listing.class);
-
-        System.out.println(data.getProperty().toString());
-
-
-    }
-
-    public static void main(String[] args) throws IOException {
-
-        GsonTestCreateRead.create();
-        GsonTestCreateRead.read();
-
-
-
-    }
 }

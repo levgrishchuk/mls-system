@@ -1,8 +1,15 @@
+import mls.Address;
 import mls.Size;
+import mls.property.DetachedHome;
+import mls.property.Farmhouse;
+import mls.property.LeaseInformation;
+import mls.property.Property;
 import mls.property.structure.Building;
 import mls.property.structure.Room;
 import mls.property.structure.exterior.Backyard;
 import mls.property.structure.exterior.Exterior;
+import mls.property.structure.exterior.Lawn;
+import mls.property.structure.exterior.Pool;
 import mls.property.structure.neighbourhoodfeatures.Hospital;
 import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeatures;
 import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeaturesContainer;
@@ -105,6 +112,15 @@ public class test {
         assert c1.equalss(c2);
         assert c1.equalss(c3);
         assert !c1.equalss(c4);
+
+
+    }
+
+    @Test
+    public void addAppliance(){
+//        Building f = new Building.Builder().build();
+//        f.addRoom(new Room());
+
 
 
     }
