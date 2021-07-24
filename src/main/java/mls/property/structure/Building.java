@@ -200,7 +200,7 @@ public class Building {
             return flag && true;
         }
 
-        // compare attributes of all objects inside
+        // short form variables
         List<Room> thisList = this.getRooms();
         List<Room> otherList = ((Building) other).getRooms();
 
@@ -211,6 +211,8 @@ public class Building {
 
         // iteratively check if all the objects have the same attributes
         // result accumulated in flag, check if each individual object has different attributes
+        // O(n^2) time complexity, pretty bad, but did not find another option. Would need to be able to sort
+        // rooms to do better.
         boolean roomFlag = true;
         for(int i = 0; i < thisList.size(); i++){
             boolean rowFlag = false;
@@ -219,6 +221,7 @@ public class Building {
             }
             roomFlag = roomFlag && rowFlag;
         }
+        // result of simple attributes and room list
         return flag && roomFlag;
 
     }

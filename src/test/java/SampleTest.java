@@ -12,8 +12,8 @@ public class SampleTest {
                         "Toronto",
                         "Ontario",
                         "M1H 1B3"))*/
-                .annualTax(1200.00)/*
-                .landSize(new Size(10.0, 10.0, 10.0, "meter"))*/
+                .annualTax(1200.00)
+                .landSize(new Size(10.0, 10.0, "meter"))
                 .lease(new LeaseInformation("Strata", 550.0))
                 .build();
 
@@ -23,8 +23,8 @@ public class SampleTest {
                         "Toronto",
                         "Ontario",
                         "M1H 1B3"))*/
-                .annualTax(1200.00)/*
-                .landSize(new Size(10.0, 10.0, 10.0, "meter"))*/
+                .annualTax(1200.00)
+                .landSize(new Size(10.0, 10.0, "meter"))
                 .lease(new LeaseInformation("Strata", 550.0))
                 .build();
 

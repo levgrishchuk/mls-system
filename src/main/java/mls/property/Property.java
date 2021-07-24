@@ -99,6 +99,9 @@ public class Property {
         this.exteriors.clear();
         this.exteriors.addAll(exteriors);
     }
+    public void addExterior(Exterior exterior) {
+        this.exteriors.add(exterior);
+    }
 
     public Building getBuilding() {
         return building;
@@ -118,6 +121,10 @@ public class Property {
 
     public LeaseInformation getLeaseInformation() {
         return new LeaseInformation(this.leaseInformation);
+    }
+    
+    public void addNeighbourhoodFeature(NeighbourhoodFeatures neighbourhoodFeatures) {
+        this.neighbourhood.add(neighbourhoodFeatures);
     }
 
     /**
