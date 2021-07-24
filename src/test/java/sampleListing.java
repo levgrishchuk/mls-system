@@ -51,7 +51,6 @@ public class sampleListing {
             .build();
 
     static Listing l = new Listing.Builder()
-            .setMlsNumber(UUID.randomUUID())
             .setListingPrice(1000000.0F)
             .setDateAdded(new Date())
             .setProperty(f)
