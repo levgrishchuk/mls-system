@@ -1,3 +1,4 @@
+import com.google.common.collect.Lists;
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
 import mls.*;
@@ -14,9 +15,7 @@ import mls.property.structure.neighbourhoodfeatures.School;
 
 import java.io.*;
 import java.lang.reflect.Type;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.UUID;
+import java.util.*;
 
 public class GsonTestCreateRead {
 
@@ -90,6 +89,23 @@ public class GsonTestCreateRead {
         }
     }
 
+    public static void createCollection() throws IOException {
+        // get path of A3 folder on your local machine
+        String filePath = new File("").getAbsolutePath();
+        // make reader using what is effectively relative pathing
+        try (Writer writer = new FileWriter(filePath + "/src/test/java/sampleDataWithArray.json")) {
+
+
+            Gson gson = new GsonBuilder()
+                    .create();
+
+            JsonArray array = new JsonArray();
+            gson.toJson(array, writer);
+//            System.out.println(gson.toJson(l));
+
+        }
+    }
+
     /**
      * finds listing by mls number
      * @param
@@ -113,10 +129,38 @@ public class GsonTestCreateRead {
 
     }
 
+    /**
+     * search by uuid
+     * @param
+     * @throws IOException
+//     */
+    public static void read(int test) throws IOException {
+        Gson gson = new GsonBuilder()
+                .setPrettyPrinting()
+                .registerTypeAdapter(Exterior.class, new typeAdapter<Exterior>())
+                .registerTypeAdapter(NeighbourhoodFeatures.class, new typeAdapter<NeighbourhoodFeatures>())
+                .registerTypeAdapter(Property.class, new typeAdapter<Property>())
+                .create();
+        // get path of A3 folder on your local machine
+        String filePath = new File("").getAbsolutePath();
+        // make reader using what is effectively relative pathing
+        JsonReader reader = new JsonReader(new FileReader(filePath + "/src/test/java/sampleDataWithArray.json"));
+
+        Listing[] data = gson.fromJson(reader, Listing[].class);
+
+        List<Listing> test = Arrays.stream(data).toList();
+        test.add(sampleListing.getListing());
+
+        System.out.println();
+
+
+    }
+
     public static void main(String[] args) throws IOException {
 
-        GsonTestCreateRead.create();
-        GsonTestCreateRead.read();
+//        GsonTestCreateRead.createCollection();
+//        GsonTestCreateRead.readCol();
+        GsonTestCreateRead.read(1);
 
     }
 

@@ -43,7 +43,7 @@ public class NeighbourhoodFeaturesContainer {
     }
 
 
-    public boolean equalss(NeighbourhoodFeaturesContainer other){
+    public boolean equals(NeighbourhoodFeaturesContainer other){
         List<NeighbourhoodFeatures> thisList = this.getNeighbourhood();
         List<NeighbourhoodFeatures> otherList = other.getNeighbourhood();
 
