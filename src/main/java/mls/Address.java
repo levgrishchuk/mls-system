@@ -60,4 +60,18 @@ final public class Address {
         return postalCode;
     }
 
+    @Override
+    public boolean equals(Object other){
+        if(other.getClass() != Address.class){
+            return false;
+        }
+        return (this.getStreetNumber() == ((Address) other).getStreetNumber()) &&
+                (this.getStreetName().equals(((Address) other).getStreetName())) &&
+                (this.getCity().equals(((Address) other).getCity())) &&
+                (this.getProvince().equals(((Address) other).getProvince())) &&
+                (this.getPostalCode().equals(((Address) other).getPostalCode()));
+
+
+    }
+
 }
