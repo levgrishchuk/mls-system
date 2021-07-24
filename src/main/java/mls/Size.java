@@ -1,5 +1,7 @@
 package mls;
 
+import mls.property.structure.Room;
+
 /**
  * Represents a Size object
  * Immutable class (final fields, no setters, Deep Copy constructor)
@@ -14,10 +16,9 @@ public class Size {
      * A Constructor
      * @param length
      * @param width
-     * @param height
      * @param unit
      */
-    public Size(Double length, Double width, Double height, String unit) {
+    public Size(Double length, Double width, String unit) {
         this.length = length;
         this.width = width;
         this.unit = unit;
@@ -47,5 +48,15 @@ public class Size {
 
     public String getUnit() {
         return unit;
+    }
+
+    @Override
+    public boolean equals(Object other){
+        if(other.getClass() != Size.class){
+            return false;
+        }
+        return (this.getLength().equals(((Size) other).getLength())) &&
+                (this.getWidth().equals(((Size) other).getWidth())) &&
+                (this.getUnit().equals(((Size) other).getUnit()));
     }
 }

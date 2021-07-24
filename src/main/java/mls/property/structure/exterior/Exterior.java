@@ -1,6 +1,7 @@
 package mls.property.structure.exterior;
 
 import mls.Size;
+import mls.property.structure.Room;
 
 public abstract class Exterior {
     private Size size;
@@ -29,12 +30,16 @@ public abstract class Exterior {
         this.size = size;
     }
 
-//    public boolean equals(Exterior other){
-//        if(this == other){
-//            return true;
-//        }
-//
-//        if()
-//    }
+    @Override
+    public boolean equals(Object other){
+        if(other.getClass().getSuperclass() != Exterior.class){
+            return false;
+        }
+        if(this == other){
+            return true;
+        }
+
+        return this.getSize().equals(((Exterior) other).getSize());
+    }
 
 }

@@ -1,6 +1,7 @@
 package mls.property.structure.exterior;
 
 import mls.Size;
+import mls.property.structure.Room;
 import mls.property.structure.exterior.Exterior;
 
 public class Parking extends Exterior {
@@ -42,5 +43,15 @@ public class Parking extends Exterior {
 
     public void setCarSpace(int carSpace) {
         this.carSpace = carSpace;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if(other.getClass() != Parking.class){
+            return false;
+        }
+        return super.equals(other) &&
+                (this.getType().equals(((Parking) other).getType())) &&
+                (this.getCarSpace() == ((Parking) other).getCarSpace());
     }
 }

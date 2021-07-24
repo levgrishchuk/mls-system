@@ -23,4 +23,12 @@ public class Park implements NeighbourhoodFeatures {
     public NeighbourhoodFeatures makeCopy(){
         return new Park(this);
     }
+
+    @Override
+    public boolean equals(Object other){
+        if(other.getClass() != Park.class){
+            return false;
+        }
+        return (this.getLink().equals(((Park) other).getLink()));
+    }
 }

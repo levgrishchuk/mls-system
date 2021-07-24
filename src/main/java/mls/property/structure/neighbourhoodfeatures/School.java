@@ -40,4 +40,13 @@ public class School implements NeighbourhoodFeatures {
     public NeighbourhoodFeatures makeCopy(){
         return new School(this);
     }
+
+    @Override
+    public boolean equals(Object other){
+        if(other.getClass() != School.class){
+            return false;
+        }
+        return (this.getLink().equals(((School) other).getLink()) &&
+                this.getPhoneNumber().equals(((School) other).getPhoneNumber()));
+    }
 }

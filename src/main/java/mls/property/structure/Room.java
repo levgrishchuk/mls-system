@@ -51,5 +51,14 @@ public class Room {
         this.size = size;
     }
 
+    @Override
+    public boolean equals(Object other){
+        if(other.getClass() != Room.class){
+            return false;
+        }
+        return (this.getType() == ((Room) other).getType() &&
+                this.getSize().equals(((Room) other).getSize()));
+    }
+
 
 }

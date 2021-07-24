@@ -8,4 +8,5 @@ public interface NeighbourhoodFeatures {
     public void setLink(String link);
     public String getLink();
     public NeighbourhoodFeatures makeCopy();
+    public boolean equals(Object other);
 }

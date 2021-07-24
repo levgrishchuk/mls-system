@@ -1,9 +1,7 @@
 package mls.property.structure.neighbourhoodfeatures;
 import mls.property.structure.Room;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
+
+import java.util.*;
 
 /**
  * Stores list of neighbourhood features
@@ -44,21 +42,36 @@ public class NeighbourhoodFeaturesContainer {
         }
     }
 
-    public boolean equals(NeighbourhoodFeaturesContainer other){
-        // compare addresses
+
+    public boolean equalss(NeighbourhoodFeaturesContainer other){
+        List<NeighbourhoodFeatures> thisList = this.getNeighbourhood();
+        List<NeighbourhoodFeatures> otherList = other.getNeighbourhood();
+
+        // if containers have the same addresses
         if(this == other){
             return true;
         }
 
-        // temp copy
-        List<NeighbourhoodFeatures> temp = new ArrayList<NeighbourhoodFeatures>(this.neighbourhoodFeaturesList);
-        for(NeighbourhoodFeatures feature: other.getNeighbourhood()){
-            // if no match, return not equal
-            if(!(temp.remove(feature))){
-                return false;
-            }
+        // if lists have the same addresses
+        if(thisList == otherList){
+            return true;
         }
-        // true if complete match
-        return temp.isEmpty();
+
+        // if lists have different lengths
+        if(thisList.size() != otherList.size()){
+            return false;
+        }
+
+        // iteratively check if all the objects have the same attributes
+        // result accumulated in flag, check if each individual object has different attributes
+        boolean totalflag = true;
+        for(int i = 0; i < thisList.size(); i++){
+            boolean rowflag = false;
+            for(int j = 0; j < otherList.size(); j++){
+                rowflag = rowflag || thisList.get(i).equals(otherList.get(j));
+            }
+            totalflag = totalflag && rowflag;
+        }
+        return totalflag;
     }
 }
