@@ -1,5 +1,7 @@
 package mls;
 
+import java.util.Objects;
+
 /**
  * Represents a participant
  * Mutable class
@@ -65,5 +67,16 @@ public class Participant {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    /**
+     * Returns if obj is equal to this instance.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Participant)) return false;
+        Participant that = (Participant) o;
+        return Objects.equals(getName(), that.getName()) && Objects.equals(getAddress(), that.getAddress()) && Objects.equals(getEmail(), that.getEmail()) && Objects.equals(getPhone(), that.getPhone());
     }
 }

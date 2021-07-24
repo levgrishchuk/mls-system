@@ -1,5 +1,7 @@
 package mls;
 
+import mls.property.Property;
+
 /**
  * Represents a broker
  * Mutable class
@@ -45,5 +47,17 @@ public class Broker extends Participant {
 
     public void setBrokerage(Brokerage brokerage) {
         this.brokerage = brokerage;
+    }
+
+    /**
+     * Returns true if obj is identical to this instance.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof Broker))
+            return false;
+
+        Broker p = (Broker) obj;
+        return super.equals(p) && this.brokerage.equals(p.getBrokerage());
     }
 }
