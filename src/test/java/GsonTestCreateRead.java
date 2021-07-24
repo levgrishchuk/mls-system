@@ -94,7 +94,7 @@ public class GsonTestCreateRead {
      * finds listing by mls number
      * @param
      */
-    public static void read() throws IOException {
+    public static void read(UUID mlsid) throws IOException {
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .registerTypeAdapter(Exterior.class, new typeAdapter<Exterior>())
