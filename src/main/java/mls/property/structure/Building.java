@@ -193,18 +193,19 @@ public class Building {
         if(this.getRooms() == other.getRooms()){
             return flag && true;
         }
+        return false;
 
-        // temp copy
-        List<Room> temp = new ArrayList<Room>(this.getRooms());
-        for(Room room: other.getRooms()){
-            // if no match, return not equal
-            if(!(temp.remove(room))){
-                return false;
-            }
-        }
-
-        // true if complete match
-        return flag && temp.isEmpty();
+//        // temp copy
+//        List<Room> temp = new ArrayList<Room>(this.getRooms());
+//        for(Room room: other.getRooms()){
+//            // if no match, return not equal
+//            if(!(temp.remove(room))){
+//                return false;
+//            }
+//        }
+//
+//        // true if complete match
+//        return flag && temp.isEmpty();
     }
 
     public static class Builder {

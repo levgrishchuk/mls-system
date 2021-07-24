@@ -15,4 +15,5 @@ public class Backyard extends Exterior {
     public Backyard(Backyard other){
         super(other);
     }
+
 }

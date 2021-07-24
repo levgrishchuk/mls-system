@@ -43,5 +43,10 @@ public class Hospital implements NeighbourhoodFeatures {
         return new Hospital(this);
     }
 
+    @Override
+    public boolean equals(Object other){
+        return (this.getLink().equals(((Hospital) other).getLink()) &&
+                this.getPhoneNumber().equals(((Hospital) other).getPhoneNumber()));
+    }
 
 }

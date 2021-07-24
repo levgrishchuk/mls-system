@@ -43,4 +43,10 @@ public class Parking extends Exterior {
     public void setCarSpace(int carSpace) {
         this.carSpace = carSpace;
     }
+
+    public boolean equals(Object other) {
+        return super.equals(other) &&
+                (this.getType().equals(((Parking) other).getType())) &&
+                (this.getCarSpace() == ((Parking) other).getCarSpace());
+    }
 }

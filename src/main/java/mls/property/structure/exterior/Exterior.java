@@ -29,12 +29,12 @@ public abstract class Exterior {
         this.size = size;
     }
 
-//    public boolean equals(Exterior other){
-//        if(this == other){
-//            return true;
-//        }
-//
-//        if()
-//    }
+    public boolean equals(Exterior other){
+        if(this == other){
+            return true;
+        }
+
+        return this.getSize().equals(other.getSize());
+    }
 
 }

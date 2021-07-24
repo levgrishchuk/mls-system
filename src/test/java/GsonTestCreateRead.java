@@ -41,7 +41,7 @@ public class GsonTestCreateRead {
                             "Ontario",
                             "M1H 1B3"))
                     .annualTax(1200.00)
-                    .landSize(new Size(10.0, 10.0, 10.0, "meter"))
+                    .landSize(new Size(10.0, 10.0, "meter"))
                     .addExterior(new Lawn())
                     .addExterior(new Pool())
                     .building(new Building.Builder()
@@ -50,9 +50,9 @@ public class GsonTestCreateRead {
                             .setStoryCount(1)
                             .setRooms(Arrays.asList(
                                     new Room(Room.RoomType.Bed,
-                                            new Size(10.0, 10.0, 10.0, "meter")),
+                                            new Size(10.0, 10.0, "meter")),
                                     new Room(Room.RoomType.Bath,
-                                            new Size(10.0, 10.0, 10.0, "meter"))
+                                            new Size(10.0, 10.0, "meter"))
                                     )
                             )
                             .setExteriorDesign("Brick")

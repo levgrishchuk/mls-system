@@ -14,10 +14,9 @@ public class Size {
      * A Constructor
      * @param length
      * @param width
-     * @param height
      * @param unit
      */
-    public Size(Double length, Double width, Double height, String unit) {
+    public Size(Double length, Double width, String unit) {
         this.length = length;
         this.width = width;
         this.unit = unit;
@@ -47,5 +46,11 @@ public class Size {
 
     public String getUnit() {
         return unit;
+    }
+
+    public boolean equals(Size other){
+        return (this.getLength().equals(other.getLength())) &&
+                (this.getWidth().equals(other.getWidth())) &&
+                (this.getUnit().equals(other.getUnit()));
     }
 }
