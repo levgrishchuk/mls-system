@@ -32,7 +32,7 @@ public abstract class Exterior {
 
     @Override
     public boolean equals(Object other){
-        if(other.getClass().getSuperclass() != Exterior.class){
+        if(other == null || other.getClass().getSuperclass() != Exterior.class){
             return false;
         }
         if(this == other){

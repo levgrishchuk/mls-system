@@ -43,7 +43,7 @@ public class School implements NeighbourhoodFeatures {
 
     @Override
     public boolean equals(Object other){
-        if(other.getClass() != School.class){
+        if(other == null || other.getClass() != School.class){
             return false;
         }
         return (this.getLink().equals(((School) other).getLink()) &&

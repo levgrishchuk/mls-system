@@ -173,7 +173,7 @@ public class Building {
     @Override
     public boolean equals(Object other){
         // if not building object, automatically not equals
-        if(other.getClass() != Building.class){
+        if(other == null || other.getClass() != Building.class){
             return false;
         }
 

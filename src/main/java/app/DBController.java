@@ -1,18 +1,14 @@
 package app;
-import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.google.gson.stream.JsonReader;
 import mls.*;
 import mls.property.Property;
-import mls.property.structure.exterior.Backyard;
 import mls.property.structure.exterior.Exterior;
 import mls.property.structure.neighbourhoodfeatures.NeighbourhoodFeatures;
 
 import java.io.*;
-import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -66,6 +62,41 @@ public class DBController {
     }
 
     /**
+     * Searches listing by listing in database.
+     * @param listing
+     * @return Returns Listing if found, otherwise null.
+     * @throws IOException
+     */
+    public Listing read(Listing listing) throws IOException {
+        return this.read(listing.getMlsNumber());
+    }
+
+    /**
+     * Searches listing by postal code in database.
+     * @param postalCode
+     * @return Returns Listing if found, otherwise null.
+     * @throws IOException
+     */
+    public List<Listing> readByPostalCode(String postalCode) throws IOException {
+        return readAll().stream()
+                .filter(l -> l.getProperty().getAddress().getPostalCode().equals(postalCode))
+                .toList();
+
+    }
+
+    /**
+     * Searches listing by property type in database.
+     * @param pType
+     * @return Returns Listing if found, otherwise null.
+     * @throws IOException
+     */
+    public List<Listing> readByPropertyType(String pType) throws IOException {
+        return readAll().stream()
+                .filter(l -> l.getProperty().getClass().toString().equals("mls.property." + pType))
+                .toList();
+    }
+
+    /**
      * Returns a List of all Listing available in database.
      * @throws IOException
      */
@@ -101,7 +132,42 @@ public class DBController {
     }
 
     /**
+     * Delete listing by mls number
+     * @return true if deleted successfully, false if Listing not in db
+     * @throws IOException
+     */
+    public boolean delete(UUID mlsNumber) throws IOException {
+        // snapshot of current db
+        List<Listing> arrL = readAll();
+
+        Listing deleteMe = readAll().stream()
+                .filter(l -> l.getMlsNumber().equals(mlsNumber))
+                .findFirst().orElse(null);
+
+        // if found a match, delete db and reinsert updated snapshot
+        if(deleteMe != null){
+            arrL.remove(deleteMe);
+            this.clear();
+            Files.writeString(Path.of(DBController.JSONPATH), gson.toJson(arrL));
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    /**
+     * Delete listing by mls number
+     * @return true if deleted successfully, false if Listing not in db
+     * @throws IOException
+     */
+    public boolean delete(Listing listing) throws IOException{
+        return this.delete(listing.getMlsNumber());
+    }
+
+    /**
      * Clears the database.
+     * @throws IOException
      */
     public void clear() throws IOException {
         Files.writeString(Path.of(DBController.JSONPATH), "");

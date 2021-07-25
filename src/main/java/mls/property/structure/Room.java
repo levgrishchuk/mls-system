@@ -53,7 +53,7 @@ public class Room {
 
     @Override
     public boolean equals(Object other){
-        if(other.getClass() != Room.class){
+        if(other == null || other.getClass() != Room.class){
             return false;
         }
         return (this.getType() == ((Room) other).getType() &&

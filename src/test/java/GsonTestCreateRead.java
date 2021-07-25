@@ -125,7 +125,7 @@ public class GsonTestCreateRead {
 
         Listing data = gson.fromJson(reader, Listing.class);
 
-        System.out.println(data.getProperty().toString());
+        System.out.println(data.getProperty().getClass().toString());
 
 
     }
@@ -157,11 +157,13 @@ public class GsonTestCreateRead {
 
     }
 
+
+
     public static void main(String[] args) throws IOException {
 
-//        GsonTestCreateRead.createCollection();
+        GsonTestCreateRead.create();
 //        GsonTestCreateRead.readCol();
-        GsonTestCreateRead.read(1);
+        GsonTestCreateRead.read();
 
     }
 

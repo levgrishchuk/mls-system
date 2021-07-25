@@ -47,7 +47,7 @@ public class Parking extends Exterior {
 
     @Override
     public boolean equals(Object other) {
-        if(other.getClass() != Parking.class){
+        if(other == null || other.getClass() != Parking.class){
             return false;
         }
         return super.equals(other) &&

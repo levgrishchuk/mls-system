@@ -26,7 +26,7 @@ public class Park implements NeighbourhoodFeatures {
 
     @Override
     public boolean equals(Object other){
-        if(other.getClass() != Park.class){
+        if(other == null || other.getClass() != Park.class){
             return false;
         }
         return (this.getLink().equals(((Park) other).getLink()));

@@ -62,7 +62,7 @@ final public class Address {
 
     @Override
     public boolean equals(Object other){
-        if(other.getClass() != Address.class){
+        if(other == null || other.getClass() != Address.class){
             return false;
         }
         return (this.getStreetNumber() == ((Address) other).getStreetNumber()) &&
