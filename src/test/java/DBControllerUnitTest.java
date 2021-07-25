@@ -144,5 +144,26 @@ public class DBControllerUnitTest {
 
     }
 
+    @Test
+    public void TestDeleteByMlsNumber() throws IOException {
+        Listing l1 = TestHelper.getSample();
+
+        db.update(l1);
+
+        List<Listing> dbList = db.readAll();
+        assertEquals(true, dbList.contains(l1));
+
+        // delete existing entry
+        boolean resultOfDeletion = db.delete(l1.getMlsNumber());
+        dbList = db.readAll();
+        assertEquals(true, resultOfDeletion == true &&
+                dbList.contains(l1) == false);
+
+        // delete non-existing entry
+        resultOfDeletion = db.delete(l1.getMlsNumber());
+        assertEquals(false, resultOfDeletion);
+
+    }
+
 
 }

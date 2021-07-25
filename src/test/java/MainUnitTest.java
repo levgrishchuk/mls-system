@@ -1,5 +1,8 @@
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
+import mls.property.DetachedHome;
+import mls.property.Recreational;
+import mls.property.StackedTownhouse;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -9,6 +12,7 @@ import app.*;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 public class MainUnitTest {
@@ -90,4 +94,25 @@ public class MainUnitTest {
         l1 = DBController.getInstance().read(l.getMlsNumber());
         assertEquals(40f, l1.getListingPrice(), 0.00001);
     }
+
+    @Test
+    public void TestDeleteByPropertyType() throws IOException {
+        Listing l1 = TestHelper.getSample();
+        l1.setProperty(new Recreational.Builder().build());
+        DBController.getInstance().update(l1);
+
+        Listing l2 = DBController.getInstance().read(l1.getMlsNumber());
+        assertEquals(true, l1.equals(l2));
+
+        List<Listing> stackedTownhouses = DBController.getInstance().readByPropertyType("Recreational");
+
+        for(Listing listing : stackedTownhouses){
+            DBController.getInstance().delete(listing);
+        }
+
+        assertEquals(true, DBController.getInstance().read(l1) == null);
+
+    }
+
+
 }
