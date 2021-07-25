@@ -43,8 +43,6 @@ public class DBControllerUnitTest {
 
     @Test
     public void TestUpdateReplace() throws IOException {
-        db.clear();
-
         Listing listing = TestHelper.getSample();
         db.update(listing);
         listing.setListingPrice(23f);
