@@ -191,7 +191,7 @@ public class Building {
                 (this.getStoryCount() == ((Building) other).getUnitCount()) &&
                 (this.getStoryCount() == ((Building) other).getStoryCount()) &&
                 (this.HasBasement() == ((Building) other).HasBasement()) &&
-                (this.getExteriorDesign() == ((Building) other).getExteriorDesign()) &&
+                (this.getExteriorDesign().equals(((Building) other).getExteriorDesign())) &&
                 (this.getAppliances().equals(((Building) other).getAppliances()));
 
         // compare rooms lists
@@ -223,7 +223,6 @@ public class Building {
         }
         // result of simple attributes and room list
         return flag && roomFlag;
-
     }
 
     public static class Builder {
