@@ -4,7 +4,8 @@ import com.google.gson.*;
 import java.lang.reflect.Type;
 
 /**
- * For serializing/deserializing abstract/interface/super classes
+ * Generic solution for serializing/deserializing abstract/interface/sub classes
+ * Code taken from Andre Carvalho at https://stackoverflow.com/questions/16000163/using-gson-and-abstract-classes
  * @param <T>
  */
 public class TypeAdapter<T> implements JsonSerializer<T>, JsonDeserializer<T> {

@@ -79,7 +79,14 @@ public class DBController {
      */
     public List<Listing> readByPostalCode(String postalCode) throws IOException {
         return readAll().stream()
-                .filter(l -> l.getProperty().getAddress().getPostalCode().equals(postalCode))
+                .filter(l -> {
+                    try {
+                        return l.getProperty().getAddress().getPostalCode().equals(postalCode);
+                    }
+                    catch(Exception e){
+                        return false;
+                    }
+                })
                 .toList();
 
     }
@@ -92,7 +99,14 @@ public class DBController {
      */
     public List<Listing> readByPropertyType(String pType) throws IOException {
         return readAll().stream()
-                .filter(l -> l.getProperty().getClass().toString().equals("mls.property." + pType))
+                .filter(l -> {
+                    try {
+                        return l.getProperty().getClass().toString().equals("class mls.property." + pType);
+                    }
+                    catch(Exception e){
+                        return false;
+                    }
+                })
                 .toList();
     }
 
@@ -140,11 +154,12 @@ public class DBController {
         // snapshot of current db
         List<Listing> arrL = readAll();
 
+        // find listing to be deleted
         Listing deleteMe = readAll().stream()
                 .filter(l -> l.getMlsNumber().equals(mlsNumber))
                 .findFirst().orElse(null);
 
-        // if found a match, delete db and reinsert updated snapshot
+        // if found a match, update snapshot, delete db, insert updated snapshot into db
         if(deleteMe != null){
             arrL.remove(deleteMe);
             this.clear();
