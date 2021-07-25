@@ -1,9 +1,9 @@
 [
   {
-    "mlsNumber": "3cf83ad0-1717-4044-a95b-1f60ca4a0e7c",
-    "listingPrice": 23.0,
-    "dateAdded": "Jul 24, 2021, 2:30:00 PM",
-    "dateSold": "Jul 24, 2021, 2:30:00 PM",
+    "mlsNumber": "2ac25376-0f56-4065-a727-19bba6b7d378",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 24, 2021, 9:44:05 PM",
+    "dateSold": "Jul 24, 2021, 9:44:05 PM",
     "property": {
       "typeName": "mls.property.Farmhouse",
       "data": {
@@ -97,7 +97,7 @@
       "phone": "987-654-3210"
     },
     "buyer": {
-      "name": "Tim",
+      "name": "Michael",
       "address": {
         "streetNumber": 3495,
         "streetName": "Lawrence Ave.",
@@ -105,16 +105,16 @@
         "province": "Ontario",
         "postalCode": "M1H 1B3"
       },
-      "email": "tim@gmail.com",
-      "phone": "124-456-7890"
+      "email": "mike@gmail.com",
+      "phone": "abc-456-7890"
     },
     "status": "Sold"
   },
   {
-    "mlsNumber": "5372b5d3-2730-41d7-b3f8-93243e02b23b",
+    "mlsNumber": "833b11ab-135f-4a93-811b-a3c51003cbb2",
     "listingPrice": 120000.0,
-    "dateAdded": "Jul 24, 2021, 5:25:16 PM",
-    "dateSold": "Jul 24, 2021, 5:25:16 PM",
+    "dateAdded": "Jul 24, 2021, 9:45:04 PM",
+    "dateSold": "Jul 24, 2021, 9:45:04 PM",
     "property": {
       "typeName": "mls.property.Farmhouse",
       "data": {
@@ -208,7 +208,7 @@
       "phone": "987-654-3210"
     },
     "buyer": {
-      "name": "Tim",
+      "name": "Michael",
       "address": {
         "streetNumber": 3495,
         "streetName": "Lawrence Ave.",
@@ -216,9 +216,14 @@
         "province": "Ontario",
         "postalCode": "M1H 1B3"
       },
-      "email": "tim@gmail.com",
-      "phone": "124-456-7890"
+      "email": "mike@gmail.com",
+      "phone": "abc-456-7890"
     },
     "status": "Sold"
+  },
+  {
+    "mlsNumber": "4b14b0b3-165e-4a82-8f0e-7b8f3db07907",
+    "listingPrice": 40.0,
+    "status": "Active"
   }
 ]
