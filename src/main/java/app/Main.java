@@ -42,7 +42,7 @@ public class Main {
             @RequestParam(value = "desc", required = true, defaultValue = "") String description,
             @RequestParam(value = "owner", required = true, defaultValue = "{}") String owner,
             @RequestParam(value = "broker", required = true, defaultValue = "{}") String broker
-        ) {
+    ) {
         try {
             Listing l = Listing.builder()
                     .setListingPrice(price)

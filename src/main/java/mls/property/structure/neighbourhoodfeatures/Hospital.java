@@ -47,7 +47,7 @@ public class Hospital implements NeighbourhoodFeatures {
 
     @Override
     public boolean equals(Object other){
-        if(other.getClass() != Hospital.class){
+        if(other == null || other.getClass() != Hospital.class){
             return false;
         }
         return (this.getLink().equals(((Hospital) other).getLink()) &&

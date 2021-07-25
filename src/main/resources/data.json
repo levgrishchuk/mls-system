@@ -225,5 +225,3100 @@
       "phone": "abc-456-7890"
     },
     "status": "Sold"
+  },
+  {
+    "mlsNumber": "4b14b0b3-165e-4a82-8f0e-7b8f3db07907",
+    "listingPrice": 40.0,
+    "status": "Active"
+  },
+  {
+    "mlsNumber": "d833bcf3-fded-49f3-afb3-eb9d93f1975d",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 1:28:30 AM",
+    "dateSold": "Jul 25, 2021, 1:28:30 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Michael",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mike@gmail.com",
+      "phone": "abc-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "2ac3ad06-b57d-40dc-bf28-25c7013e02b3",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 1:28:30 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "status": "Active"
+  },
+  {
+    "mlsNumber": "8ff4c8c3-f717-460a-abcd-8fe85458150c",
+    "listingPrice": 40.0,
+    "status": "Active"
+  },
+  {
+    "mlsNumber": "23d9f502-ffa8-4b90-8dbc-20c7278eb42c",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 1:34:30 AM",
+    "dateSold": "Jul 25, 2021, 1:34:30 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "d026a349-26c9-412d-93cd-7f583aa94501",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 1:55:44 AM",
+    "dateSold": "Jul 25, 2021, 1:55:44 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "b9b04926-0b41-48c1-ab04-a87db3f311e9",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 1:55:44 AM",
+    "dateSold": "Jul 25, 2021, 1:55:44 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "A1A 2B2"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "063c995e-4a74-47c7-bcdf-a771a4ef8b54",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 1:55:44 AM",
+    "dateSold": "Jul 25, 2021, 1:55:44 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "A1A 2B2"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "3ddf1aa0-fbc0-4bcc-a9de-c8267e572437",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 1:55:44 AM",
+    "dateSold": "Jul 25, 2021, 1:55:44 AM",
+    "property": {
+      "typeName": "mls.property.DetachedHome",
+      "data": {
+        "isSemiDetached": true,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "ce7ba4f1-9661-441c-925e-f79edd990e03",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 1:55:44 AM",
+    "dateSold": "Jul 25, 2021, 1:55:44 AM",
+    "property": {
+      "typeName": "mls.property.DetachedHome",
+      "data": {
+        "isSemiDetached": true,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "188e7459-32f4-470b-848f-91d49a5f1e72",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:00:29 AM",
+    "dateSold": "Jul 25, 2021, 2:00:29 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "c78dbce7-2492-4984-825c-0b8f6345e7d7",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:00:29 AM",
+    "dateSold": "Jul 25, 2021, 2:00:29 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "A1A 2B2"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "31795b80-0773-489d-8052-e25d9b630f06",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:00:29 AM",
+    "dateSold": "Jul 25, 2021, 2:00:29 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "A1A 2B2"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "44144da8-b6c9-45b0-a41e-93e2b40276d2",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:00:29 AM",
+    "dateSold": "Jul 25, 2021, 2:00:29 AM",
+    "property": {
+      "typeName": "mls.property.DetachedHome",
+      "data": {
+        "isSemiDetached": true,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "3f3aac53-dd84-4c76-9469-240ffcaa398f",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:00:29 AM",
+    "dateSold": "Jul 25, 2021, 2:00:29 AM",
+    "property": {
+      "typeName": "mls.property.DetachedHome",
+      "data": {
+        "isSemiDetached": true,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "50840c05-f30a-4f3a-98bd-27ddc2aced62",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:07:28 AM",
+    "dateSold": "Jul 25, 2021, 2:07:28 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "f287ca1f-b081-41d7-8ff2-db40737092d2",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:07:28 AM",
+    "dateSold": "Jul 25, 2021, 2:07:28 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "A1A 2B2"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "7ca1de7e-b088-46e1-babb-c51d83570d73",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:07:28 AM",
+    "dateSold": "Jul 25, 2021, 2:07:28 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "A1A 2B2"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "8d816660-4062-48f3-8b73-33961f81ad10",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:07:28 AM",
+    "dateSold": "Jul 25, 2021, 2:07:28 AM",
+    "property": {
+      "typeName": "mls.property.DetachedHome",
+      "data": {
+        "isSemiDetached": true,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "1c486193-8788-43a9-9fad-ea8b84ccd028",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:07:28 AM",
+    "dateSold": "Jul 25, 2021, 2:07:28 AM",
+    "property": {
+      "typeName": "mls.property.DetachedHome",
+      "data": {
+        "isSemiDetached": true,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "73dc57d7-7229-4ed3-b110-b006e65bd150",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:15:13 AM",
+    "dateSold": "Jul 25, 2021, 2:15:13 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "0024d58f-1755-402f-bfc0-32801a50851d",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:15:13 AM",
+    "dateSold": "Jul 25, 2021, 2:15:13 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "A1A 2B2"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "c2573d5b-6160-49ae-a2f9-4c0047853fb4",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:15:13 AM",
+    "dateSold": "Jul 25, 2021, 2:15:13 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "A1A 2B2"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "d517417a-698e-438c-85a8-e2da91fd61a2",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:15:13 AM",
+    "dateSold": "Jul 25, 2021, 2:15:13 AM",
+    "property": {
+      "typeName": "mls.property.DetachedHome",
+      "data": {
+        "isSemiDetached": true,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "49833228-4d94-479e-bd20-30747dfcbd9f",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:15:13 AM",
+    "dateSold": "Jul 25, 2021, 2:15:13 AM",
+    "property": {
+      "typeName": "mls.property.DetachedHome",
+      "data": {
+        "isSemiDetached": true,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "2b015804-bd6b-42dc-ab9f-0ce6b6cd19db",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:16:03 AM",
+    "dateSold": "Jul 25, 2021, 2:16:03 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "8fc98991-209c-4151-8301-bc756980f325",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:16:03 AM",
+    "dateSold": "Jul 25, 2021, 2:16:03 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "A1A 2B2"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "2f68f351-736e-45f2-b75b-ba28257442ca",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:16:03 AM",
+    "dateSold": "Jul 25, 2021, 2:16:03 AM",
+    "property": {
+      "typeName": "mls.property.Farmhouse",
+      "data": {
+        "barn": false,
+        "courtyard": false,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "A1A 2B2"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "1d4a62ed-1de7-41e2-94ee-3421505e6c27",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:16:03 AM",
+    "dateSold": "Jul 25, 2021, 2:16:03 AM",
+    "property": {
+      "typeName": "mls.property.DetachedHome",
+      "data": {
+        "isSemiDetached": true,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
+  },
+  {
+    "mlsNumber": "18b80c8e-2792-491c-af88-bace15f4e2fe",
+    "listingPrice": 120000.0,
+    "dateAdded": "Jul 25, 2021, 2:16:03 AM",
+    "dateSold": "Jul 25, 2021, 2:16:03 AM",
+    "property": {
+      "typeName": "mls.property.DetachedHome",
+      "data": {
+        "isSemiDetached": true,
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        },
+        "annualTax": 1200.0,
+        "isUnderConstruction": true,
+        "landSize": {
+          "length": 10.0,
+          "width": 10.0,
+          "unit": "meter"
+        },
+        "exteriors": [],
+        "building": {
+          "category": "MultiGenerational",
+          "unitCount": 1,
+          "storyCount": 1,
+          "rooms": [
+            {
+              "type": "Bed",
+              "size": {
+                "length": 10.0,
+                "width": 10.0,
+                "unit": "meter"
+              }
+            }
+          ],
+          "exteriorDesign": "Brick",
+          "hasBasement": false,
+          "appliances": [
+            "Waching machine"
+          ]
+        },
+        "neighbourhood": {
+          "neighbourhoodFeaturesList": [
+            {
+              "typeName": "mls.property.structure.neighbourhoodfeatures.Hospital",
+              "data": {
+                "link": "1",
+                "phoneNumber": "1"
+              }
+            }
+          ]
+        },
+        "leaseInformation": {
+          "landlord": "Strata",
+          "monthlyFee": 550.0
+        }
+      }
+    },
+    "description": "Nice farmhouse.",
+    "propertyOwner": {
+      "name": "John",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "john@gmail.com",
+      "phone": "123-456-7890"
+    },
+    "broker": {
+      "brokerage": {
+        "corporateName": "MyBrokerage",
+        "address": {
+          "streetNumber": 3495,
+          "streetName": "Lawrence Ave.",
+          "city": "Toronto",
+          "province": "Ontario",
+          "postalCode": "M1H 1B3"
+        }
+      },
+      "name": "Mary",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "mary@gmail.com",
+      "phone": "987-654-3210"
+    },
+    "buyer": {
+      "name": "Tim",
+      "address": {
+        "streetNumber": 3495,
+        "streetName": "Lawrence Ave.",
+        "city": "Toronto",
+        "province": "Ontario",
+        "postalCode": "M1H 1B3"
+      },
+      "email": "tim@gmail.com",
+      "phone": "124-456-7890"
+    },
+    "status": "Sold"
   }
 ]

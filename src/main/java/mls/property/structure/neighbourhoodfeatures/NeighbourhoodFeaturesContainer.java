@@ -43,7 +43,6 @@ public class NeighbourhoodFeaturesContainer {
         }
     }
 
-
     /**
      * Compares every element in the lists of two NeighbourhoodFeaturesContainers. Order does not matter.
      * @param other

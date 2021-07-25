@@ -52,7 +52,7 @@ public class Size {
 
     @Override
     public boolean equals(Object other){
-        if(other.getClass() != Size.class){
+        if(other == null || other.getClass() != Size.class){
             return false;
         }
         return (this.getLength().equals(((Size) other).getLength())) &&
